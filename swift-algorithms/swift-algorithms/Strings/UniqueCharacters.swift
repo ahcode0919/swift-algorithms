@@ -9,6 +9,7 @@
 import Foundation
 
 ///Functions to check if a string only consists of unique characters
+/// Swift Coding Challenge #1
 class UniqueCharacters {
     
     /// Checks if a String only contains unique Characters by using a Set comparison
