@@ -10,55 +10,55 @@ import XCTest
 @testable import swift_algorithms
 
 class RemoveDuplicatesTests: XCTestCase {
-    func testRemoveDuplicates() {
-        XCTAssertEqual(RemoveDuplicates.removeDuplicates(from: "Wombat"), "Wombat")
-        XCTAssertEqual(RemoveDuplicates.removeDuplicates(from: "hello"), "helo")
-        XCTAssertEqual(RemoveDuplicates.removeDuplicates(from: "Mississippi"), "Misp")
+    func testRemoveDuplicatesWithNSOrderedSet() {
+        XCTAssertEqual(RemoveDuplicates.removeDuplicatesWithNSOrderedSet(from: "Wombat"), "Wombat")
+        XCTAssertEqual(RemoveDuplicates.removeDuplicatesWithNSOrderedSet(from: "hello"), "helo")
+        XCTAssertEqual(RemoveDuplicates.removeDuplicatesWithNSOrderedSet(from: "Mississippi"), "Misp")
     }
 
-    func testRemoveDuplicatesPerf() {
+    func testRemoveDuplicatesWithNSOrderedSetPerf() {
         let testString = Helpers.generateRandomString(ofLength: 100000)
         self.measure {
-            _ = RemoveDuplicates.removeDuplicates(from: testString)
+            _ = RemoveDuplicates.removeDuplicatesWithNSOrderedSet(from: testString)
         }
     }
 
-    func testRemoveDuplicates2() {
-        XCTAssertEqual(RemoveDuplicates.removeDuplicates2(from: "Wombat"), "Wombat")
-        XCTAssertEqual(RemoveDuplicates.removeDuplicates2(from: "hello"), "helo")
-        XCTAssertEqual(RemoveDuplicates.removeDuplicates2(from: "Mississippi"), "Misp")
+    func testRemoveDuplicatesWithNSOrderedSetAndFilter() {
+        XCTAssertEqual(RemoveDuplicates.removeDuplicatesWithNSOrderedSetAndFilter(from: "Wombat"), "Wombat")
+        XCTAssertEqual(RemoveDuplicates.removeDuplicatesWithNSOrderedSetAndFilter(from: "hello"), "helo")
+        XCTAssertEqual(RemoveDuplicates.removeDuplicatesWithNSOrderedSetAndFilter(from: "Mississippi"), "Misp")
     }
     
-    func testRemoveDuplicatesPerf2() {
+    func testRemoveDuplicatesWithNSOrderedSetAndFilterPerf() {
         let testString = Helpers.generateRandomString(ofLength: 100000)
         self.measure {
-            _ = RemoveDuplicates.removeDuplicates2(from: testString)
+            _ = RemoveDuplicates.removeDuplicatesWithNSOrderedSetAndFilter(from: testString)
         }
     }
     
-    func testRemoveDuplicates3() {
-        XCTAssertEqual(RemoveDuplicates.removeDuplicates3(from: "Wombat"), "Wombat")
-        XCTAssertEqual(RemoveDuplicates.removeDuplicates3(from: "hello"), "helo")
-        XCTAssertEqual(RemoveDuplicates.removeDuplicates3(from: "Mississippi"), "Misp")
+    func testRemoveDuplicatesWithFilter() {
+        XCTAssertEqual(RemoveDuplicates.removeDuplicatesWithFilter(from: "Wombat"), "Wombat")
+        XCTAssertEqual(RemoveDuplicates.removeDuplicatesWithFilter(from: "hello"), "helo")
+        XCTAssertEqual(RemoveDuplicates.removeDuplicatesWithFilter(from: "Mississippi"), "Misp")
     }
     
-    func testRemoveDuplicatesPerf3() {
+    func testRemoveDuplicatesWithFilterPerf() {
         let testString = Helpers.generateRandomString(ofLength: 100000)
         self.measure {
-            _ = RemoveDuplicates.removeDuplicates3(from: testString)
+            _ = RemoveDuplicates.removeDuplicatesWithFilter(from: testString)
         }
     }
     
-    func testRemoveDuplicates4() {
-        XCTAssertEqual(RemoveDuplicates.removeDuplicates4(from: "Wombat"), "Wombat")
-        XCTAssertEqual(RemoveDuplicates.removeDuplicates4(from: "hello"), "helo")
-        XCTAssertEqual(RemoveDuplicates.removeDuplicates4(from: "Mississippi"), "Misp")
+    func testRemoveDuplicatesWithDictionaryAndFilter() {
+        XCTAssertEqual(RemoveDuplicates.removeDuplicatesWithDictionaryAndFilter(from: "Wombat"), "Wombat")
+        XCTAssertEqual(RemoveDuplicates.removeDuplicatesWithDictionaryAndFilter(from: "hello"), "helo")
+        XCTAssertEqual(RemoveDuplicates.removeDuplicatesWithDictionaryAndFilter(from: "Mississippi"), "Misp")
     }
     
-    func testRemoveDuplicatesPerf4() {
+    func testRemoveDuplicatesWithDictionaryAndFilterPerf() {
         let testString = Helpers.generateRandomString(ofLength: 100000)
         self.measure {
-            _ = RemoveDuplicates.removeDuplicates4(from: testString)
+            _ = RemoveDuplicates.removeDuplicatesWithDictionaryAndFilter(from: testString)
         }
     }
 }

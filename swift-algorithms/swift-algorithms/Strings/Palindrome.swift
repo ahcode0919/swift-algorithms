@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Check that a string is the same forwards and backwards, Ex: mom, dad, etc.
 class Palindrome {
     static func isPalindrome(_ input: String) -> Bool {
         if input.characters.count < 2 {

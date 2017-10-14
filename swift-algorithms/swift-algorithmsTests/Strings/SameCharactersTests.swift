@@ -22,7 +22,6 @@ class SameCharactersTests: XCTestCase {
     func testSameCharactersPerf() {
         let testString1 = Helpers.generateRandomString(ofLength: 100000)
         let testString2 = Helpers.generateRandomString(ofLength: 100000)
-        
         self.measure {
             _ = SameCharacters.hasSameCharacters(testString1, in: testString2)
         }
@@ -39,7 +38,6 @@ class SameCharactersTests: XCTestCase {
     func testSameCharactersPerf2() {
         let testString1 = Helpers.generateRandomString(ofLength: 100000)
         let testString2 = Helpers.generateRandomString(ofLength: 100000)
-        
         self.measure {
             _ = SameCharacters.hasSameCharacters2(testString1, in: testString2)
         }
@@ -56,7 +54,6 @@ class SameCharactersTests: XCTestCase {
     func testSameCharactersPerf3() {
         let testString1 = Helpers.generateRandomString(ofLength: 100000)
         let testString2 = Helpers.generateRandomString(ofLength: 100000)
-        
         self.measure {
             _ = SameCharacters.hasSameCharacters2(testString1, in: testString2)
         }

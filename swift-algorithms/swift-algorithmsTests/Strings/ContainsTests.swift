@@ -19,7 +19,6 @@ class ContainsTests: XCTestCase {
 
     func testContainsPerf() {
         let testString = Helpers.generateRandomString()
-
         self.measure {
             _ = Contains.containsIgnoreCase(testString, contains: "@")
         }
@@ -33,7 +32,6 @@ class ContainsTests: XCTestCase {
     
     func testContains2Perf() {
         let testString = Helpers.generateRandomString()
-
         self.measure {
             _ = Contains.containsIgnoreCase2(testString, contains: "@")
         }

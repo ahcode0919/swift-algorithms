@@ -21,7 +21,6 @@ class PalindromeTests: XCTestCase {
     
     func testPalindromePerf() {
         let testString = Helpers.generateRandomString()
-        
         self.measure {
             XCTAssertTrue(Palindrome.isPalindrome("rotAtoR"))
             XCTAssertFalse(Palindrome.isPalindrome(testString))
@@ -39,7 +38,6 @@ class PalindromeTests: XCTestCase {
     
     func testPalindrome2Perf() {
         let testString = Helpers.generateRandomString()
-
         self.measure {
             XCTAssertTrue(Palindrome.isPalindrome("rotAtoR"))
             XCTAssertFalse(Palindrome.isPalindrome2(testString))

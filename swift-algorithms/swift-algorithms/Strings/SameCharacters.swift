@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Check that two strings have the same character (including matching casing)
 class SameCharacters {
     static func hasSameCharacters(_ s1: String, in s2: String) -> Bool {
         if s1.count != s2.count {

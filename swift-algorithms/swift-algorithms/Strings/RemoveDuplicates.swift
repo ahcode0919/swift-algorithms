@@ -8,8 +8,9 @@
 
 import Foundation
 
+/// Remove duplicate characters from a String
 class RemoveDuplicates {
-    static func removeDuplicates(from input: String) -> String {
+    static func removeDuplicatesWithNSOrderedSet(from input: String) -> String {
         let set = NSOrderedSet(array: Array(input.characters))
         if let array = set.array as? [Character] {
             return String(array)
@@ -17,7 +18,7 @@ class RemoveDuplicates {
         return input
     }
     
-    static func removeDuplicates2(from input: String) -> String {
+    static func removeDuplicatesWithNSOrderedSetAndFilter(from input: String) -> String {
         var duplicateSet = Set<Character>()
         var inputArray = Array(input.characters)
         inputArray = inputArray.filter { (char) -> Bool in
@@ -30,7 +31,7 @@ class RemoveDuplicates {
         return String(inputArray)
     }
     
-    static func removeDuplicates3(from input: String) -> String {
+    static func removeDuplicatesWithFilter(from input: String) -> String {
         var used = [Character]()
         let uniqueChars = input.characters.filter { (char) -> Bool in
             if !used.contains(char) {
@@ -42,7 +43,7 @@ class RemoveDuplicates {
         return String(uniqueChars)
     }
     
-    static func removeDuplicates4(from input: String) -> String {
+    static func removeDuplicatesWithDictionaryAndFilter(from input: String) -> String {
         var uniqueDictionary = Dictionary<Character, Bool>()
         let output = input.characters.filter { (char) -> Bool in
             return uniqueDictionary.updateValue(true, forKey: char) == nil

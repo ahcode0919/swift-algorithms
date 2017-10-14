@@ -20,7 +20,6 @@ class CountCharactersTests: XCTestCase {
 
     func testCountCharactersPerf() {
         let testString = Helpers.generateRandomString(ofLength: 100000)
-
         self.measure {
             _ = CountCharacters.countOccurancesof("a", in: testString)
         }
@@ -35,7 +34,6 @@ class CountCharactersTests: XCTestCase {
     
     func testCountCharactersPerf2() {
         let testString = Helpers.generateRandomString(ofLength: 100000)
-        
         self.measure {
             _ = CountCharacters.countOccurancesof2("a", in: testString)
         }
