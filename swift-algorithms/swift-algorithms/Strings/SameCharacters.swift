@@ -10,7 +10,7 @@ import Foundation
 
 /// Check that two strings have the same character (including matching casing)
 class SameCharacters {
-    static func hasSameCharacters(_ s1: String, in s2: String) -> Bool {
+    static func hasSameCharactersWithLoop(_ s1: String, in s2: String) -> Bool {
         if s1.count != s2.count {
             return false
         }
@@ -27,15 +27,14 @@ class SameCharacters {
         return true
     }
     
-    static func hasSameCharacters2(_ s1: String, in s2: String) -> Bool {
+    static func hasSameCharactersWithSort(_ s1: String, in s2: String) -> Bool {
         if s1.count != s2.count {
             return false
         }
         return s1.characters.sorted() == s2.characters.sorted()
     }
     
-    static func hasSameCharacters3(_ s1: String, in s2: String) -> Bool {
-        var same = false
+    static func hasSameCharactersWithDictionary(_ s1: String, in s2: String) -> Bool {
         if s1.count != s2.count {
             return false
         }
@@ -59,12 +58,11 @@ class SameCharacters {
             }
         }
 
-        input1Dictionary.forEach { (key, value) in
-            if input2Dictionary[key] != value {
-                same = false
-                return
+        for pair in input1Dictionary.enumerated() {
+            if input2Dictionary[pair.element.key] != pair.element.value {
+                return false
             }
         }
-        return same
+        return true
     }
 }

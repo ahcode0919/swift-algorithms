@@ -16,7 +16,7 @@ class UniqueCharacters {
     ///
     /// - Parameter input: input string
     /// - Returns: true if string consists of unique characters
-    static func uniqueCharacters(_ input: String) -> Bool {
+    static func uniqueCharactersWithSet(_ input: String) -> Bool {
         if input.characters.count < 2 {
             return true
         }
@@ -28,7 +28,7 @@ class UniqueCharacters {
     ///
     /// - Parameter input: input String
     /// - Returns: true if string consists of unique characters
-    static func uniqueCharacters2(_ input: String) -> Bool {
+    static func uniqueCharactersWithLoop(_ input: String) -> Bool {
         if input.characters.count < 2 {
             return true
         }

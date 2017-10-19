@@ -9,13 +9,13 @@
 import Foundation
 
 class CountCharacters {
-    static func countOccurancesof(_ char: Character, in input: String) -> Int {
+    static func countOccurancesOfWithFilter(_ char: Character, in input: String) -> Int {
         return Array(input.characters).filter { (inputChar) -> Bool in
             return inputChar == char
         }.count
     }
     
-    static func countOccurancesof2(_ char: Character, in input: String) -> Int {
+    static func countOccurancesOfWithLoop(_ char: Character, in input: String) -> Int {
         var count = 0
         for inputChar in input.characters {
             if inputChar == char {

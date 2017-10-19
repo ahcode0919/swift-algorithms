@@ -11,31 +11,33 @@ import XCTest
 
 class CountCharactersTests: XCTestCase {
     
-    func testCountCharacters() {
-        XCTAssertTrue(CountCharacters.countOccurancesof("C", in: "Cash") == 1)
-        XCTAssertTrue(CountCharacters.countOccurancesof("C", in: "Test") == 0)
-        XCTAssertTrue(CountCharacters.countOccurancesof("c", in: "Cash") == 0)
-        XCTAssertTrue(CountCharacters.countOccurancesof("a", in: "") == 0)
+    func testCountCharactersWithFilter() {
+        XCTAssertTrue(CountCharacters.countOccurancesOfWithFilter("C", in: "Cash") == 1)
+        XCTAssertTrue(CountCharacters.countOccurancesOfWithFilter("C", in: "Test") == 0)
+        XCTAssertTrue(CountCharacters.countOccurancesOfWithFilter("c", in: "Cash") == 0)
+        XCTAssertTrue(CountCharacters.countOccurancesOfWithFilter("a", in: "") == 0)
     }
 
-    func testCountCharactersPerf() {
+    // Time ~ .030 sec
+    func testCountCharactersWithFilterPerf() {
         let testString = Helpers.generateRandomString(ofLength: 100000)
         self.measure {
-            _ = CountCharacters.countOccurancesof("a", in: testString)
+            _ = CountCharacters.countOccurancesOfWithFilter("a", in: testString)
         }
     }
     
-    func testCountCharacters2() {
-        XCTAssertTrue(CountCharacters.countOccurancesof2("C", in: "Cash") == 1)
-        XCTAssertTrue(CountCharacters.countOccurancesof2("C", in: "Test") == 0)
-        XCTAssertTrue(CountCharacters.countOccurancesof2("c", in: "Cash") == 0)
-        XCTAssertTrue(CountCharacters.countOccurancesof2("a", in: "") == 0)
+    func testCountCharactersWithLoop() {
+        XCTAssertTrue(CountCharacters.countOccurancesOfWithLoop("C", in: "Cash") == 1)
+        XCTAssertTrue(CountCharacters.countOccurancesOfWithLoop("C", in: "Test") == 0)
+        XCTAssertTrue(CountCharacters.countOccurancesOfWithLoop("c", in: "Cash") == 0)
+        XCTAssertTrue(CountCharacters.countOccurancesOfWithLoop("a", in: "") == 0)
     }
     
-    func testCountCharactersPerf2() {
+    // Time ~ .015 sec
+    func testCountCharactersWithLoopPerf() {
         let testString = Helpers.generateRandomString(ofLength: 100000)
         self.measure {
-            _ = CountCharacters.countOccurancesof2("a", in: testString)
+            _ = CountCharacters.countOccurancesOfWithLoop("a", in: testString)
         }
     }
 }

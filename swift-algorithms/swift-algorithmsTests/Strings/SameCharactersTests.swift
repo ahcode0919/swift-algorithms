@@ -11,51 +11,51 @@ import XCTest
 
 class SameCharactersTests: XCTestCase {
 
-    func testSameCharacters() {
-        XCTAssertTrue(SameCharacters.hasSameCharacters("abca", in: "abca"))
-        XCTAssertTrue(SameCharacters.hasSameCharacters("abc", in: "cba"))
-        XCTAssertFalse(SameCharacters.hasSameCharacters("abc", in: "abca"))
-        XCTAssertFalse(SameCharacters.hasSameCharacters("abc", in: "Abc"))
-        XCTAssertFalse(SameCharacters.hasSameCharacters("abc", in: "cbAa"))
+    func testSameCharactersWithLoop() {
+        XCTAssertTrue(SameCharacters.hasSameCharactersWithLoop("abca", in: "abca"))
+        XCTAssertTrue(SameCharacters.hasSameCharactersWithLoop("abc", in: "cba"))
+        XCTAssertFalse(SameCharacters.hasSameCharactersWithLoop("abc", in: "abca"))
+        XCTAssertFalse(SameCharacters.hasSameCharactersWithLoop("abc", in: "Abc"))
+        XCTAssertFalse(SameCharacters.hasSameCharactersWithLoop("abc", in: "cbAa"))
     }
     
-    func testSameCharactersPerf() {
-        let testString1 = Helpers.generateRandomString(ofLength: 100000)
-        let testString2 = Helpers.generateRandomString(ofLength: 100000)
+    func testSameCharactersWithLoopPerf() {
+        let testString1 = Helpers.generateRandomString(ofLength: 10000)
+        let testString2 = Helpers.generateRandomString(ofLength: 10000)
         self.measure {
-            _ = SameCharacters.hasSameCharacters(testString1, in: testString2)
+            _ = SameCharacters.hasSameCharactersWithLoop(testString1, in: testString2)
         }
     }
     
-    func testSameCharacters2() {
-        XCTAssertTrue(SameCharacters.hasSameCharacters2("abca", in: "abca"))
-        XCTAssertTrue(SameCharacters.hasSameCharacters2("abc", in: "cba"))
-        XCTAssertFalse(SameCharacters.hasSameCharacters2("abc", in: "abca"))
-        XCTAssertFalse(SameCharacters.hasSameCharacters2("abc", in: "Abc"))
-        XCTAssertFalse(SameCharacters.hasSameCharacters2("abc", in: "cbAa"))
+    func testSameCharactersWithSort() {
+        XCTAssertTrue(SameCharacters.hasSameCharactersWithSort("abca", in: "abca"))
+        XCTAssertTrue(SameCharacters.hasSameCharactersWithSort("abc", in: "cba"))
+        XCTAssertFalse(SameCharacters.hasSameCharactersWithSort("abc", in: "abca"))
+        XCTAssertFalse(SameCharacters.hasSameCharactersWithSort("abc", in: "Abc"))
+        XCTAssertFalse(SameCharacters.hasSameCharactersWithSort("abc", in: "cbAa"))
     }
     
-    func testSameCharactersPerf2() {
-        let testString1 = Helpers.generateRandomString(ofLength: 100000)
-        let testString2 = Helpers.generateRandomString(ofLength: 100000)
+    func testSameCharactersSortPerf() {
+        let testString1 = Helpers.generateRandomString(ofLength: 10000)
+        let testString2 = Helpers.generateRandomString(ofLength: 10000)
         self.measure {
-            _ = SameCharacters.hasSameCharacters2(testString1, in: testString2)
+            _ = SameCharacters.hasSameCharactersWithSort(testString1, in: testString2)
         }
     }
     
-    func testSameCharacters3() {
-        XCTAssertTrue(SameCharacters.hasSameCharacters2("abca", in: "abca"))
-        XCTAssertTrue(SameCharacters.hasSameCharacters2("abc", in: "cba"))
-        XCTAssertFalse(SameCharacters.hasSameCharacters2("abc", in: "abca"))
-        XCTAssertFalse(SameCharacters.hasSameCharacters2("abc", in: "Abc"))
-        XCTAssertFalse(SameCharacters.hasSameCharacters2("abc", in: "cbAa"))
+    func testSameCharactersWithDictionary() {
+        XCTAssertTrue(SameCharacters.hasSameCharactersWithDictionary("abca", in: "abca"))
+        XCTAssertTrue(SameCharacters.hasSameCharactersWithDictionary("abc", in: "cba"))
+        XCTAssertFalse(SameCharacters.hasSameCharactersWithDictionary("abc", in: "abca"))
+        XCTAssertFalse(SameCharacters.hasSameCharactersWithDictionary("abc", in: "Abc"))
+        XCTAssertFalse(SameCharacters.hasSameCharactersWithDictionary("abc", in: "cbAa"))
     }
     
-    func testSameCharactersPerf3() {
-        let testString1 = Helpers.generateRandomString(ofLength: 100000)
-        let testString2 = Helpers.generateRandomString(ofLength: 100000)
+    func testSameCharactersWithDictionaryPerf() {
+        let testString1 = Helpers.generateRandomString(ofLength: 10000)
+        let testString2 = Helpers.generateRandomString(ofLength: 10000)
         self.measure {
-            _ = SameCharacters.hasSameCharacters2(testString1, in: testString2)
+            _ = SameCharacters.hasSameCharactersWithDictionary(testString1, in: testString2)
         }
     }
 }

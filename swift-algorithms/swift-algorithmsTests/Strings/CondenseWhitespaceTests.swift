@@ -16,8 +16,9 @@ class CondenseWhitespaceTests: XCTestCase {
         XCTAssertEqual(result, " a b c d")
     }
 
+    // Time ~ .349 sec
     func testCondenseWhitespaceWithLoopPerf() {
-        let testString = Helpers.generateRandomString(ofLength: 10000)
+        let testString = Helpers.generateRandomString()
         self.measure {
             _ = CondenseWhitespace.condenseWhitespaceWithLoop(testString)
         }
@@ -29,6 +30,7 @@ class CondenseWhitespaceTests: XCTestCase {
         XCTAssertEqual(result, " a b c d")
     }
     
+    // Time ~ .020 sec
     func testCondenseWhitespaceWithRegexPerf() {
         let testString = Helpers.generateRandomString()
         self.measure {
@@ -42,6 +44,7 @@ class CondenseWhitespaceTests: XCTestCase {
         XCTAssertEqual(result, " a b c d")
     }
     
+    // Time ~ .088 sec
     func testCondenseWhitespaceWithSplitPerf() {
         let testString = Helpers.generateRandomString()
         self.measure {

@@ -11,36 +11,35 @@ import XCTest
 @testable import swift_algorithms
 
 class PalindromeTests: XCTestCase {
-    func testPalindrome() {
-        XCTAssertTrue(Palindrome.isPalindrome("rotAtoR"))
-        XCTAssertTrue(Palindrome.isPalindrome("aba"))
-        XCTAssertTrue(Palindrome.isPalindrome("aabbaa"))
-        XCTAssertTrue(Palindrome.isPalindrome("AAAAAA"))
-        XCTAssertFalse(Palindrome.isPalindrome("Hello"))
+    func testPalindromeWithReverse() {
+        XCTAssertTrue(Palindrome.isPalindromeWithReverse("rotAtoR"))
+        XCTAssertTrue(Palindrome.isPalindromeWithReverse("aba"))
+        XCTAssertTrue(Palindrome.isPalindromeWithReverse("aabbaa"))
+        XCTAssertTrue(Palindrome.isPalindromeWithReverse("AAAAAA"))
+        XCTAssertFalse(Palindrome.isPalindromeWithReverse("Hello"))
     }
     
-    func testPalindromePerf() {
+    func testPalindromeWithReversePerf() {
         let testString = Helpers.generateRandomString()
         self.measure {
-            XCTAssertTrue(Palindrome.isPalindrome("rotAtoR"))
-            XCTAssertFalse(Palindrome.isPalindrome(testString))
+            XCTAssertTrue(Palindrome.isPalindromeWithReverse("rotAtoR"))
+            XCTAssertFalse(Palindrome.isPalindromeWithReverse(testString))
         }
     }
     
-    func testPalindrome2() {
-        XCTAssertTrue(Palindrome.isPalindrome2("rotAtoR"))
-        XCTAssertTrue(Palindrome.isPalindrome2("aba"))
-        XCTAssertTrue(Palindrome.isPalindrome("aabbaa"))
-        XCTAssertTrue(Palindrome.isPalindrome2("AAAAAA"))
-        XCTAssertFalse(Palindrome.isPalindrome2("Hello"))
-
+    func testPalindromeWithArray() {
+        XCTAssertTrue(Palindrome.isPalindromeWithArray("rotAtoR"))
+        XCTAssertTrue(Palindrome.isPalindromeWithArray("aba"))
+        XCTAssertTrue(Palindrome.isPalindromeWithArray("aabbaa"))
+        XCTAssertTrue(Palindrome.isPalindromeWithArray("AAAAAA"))
+        XCTAssertFalse(Palindrome.isPalindromeWithArray("Hello"))
     }
     
-    func testPalindrome2Perf() {
+    func testPalindromeWithArrayPerf() {
         let testString = Helpers.generateRandomString()
         self.measure {
-            XCTAssertTrue(Palindrome.isPalindrome("rotAtoR"))
-            XCTAssertFalse(Palindrome.isPalindrome2(testString))
+            XCTAssertTrue(Palindrome.isPalindromeWithArray("rotAtoR"))
+            XCTAssertFalse(Palindrome.isPalindromeWithArray(testString))
         }
     }
 }

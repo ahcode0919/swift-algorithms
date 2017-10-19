@@ -11,31 +11,31 @@ import XCTest
 
 class UniqueCharactersTest: XCTestCase {
     
-    func testUniqueCharacters() {
-        XCTAssert(UniqueCharacters.uniqueCharacters("No duplicates"))
-        XCTAssert(UniqueCharacters.uniqueCharacters("abcdefghijklmnopqrstuvwxyz"))
-        XCTAssert(UniqueCharacters.uniqueCharacters("AaBbCc"))
-        XCTAssertFalse(UniqueCharacters.uniqueCharacters("Hello, world"))
+    func testUniqueCharactersWithSet() {
+        XCTAssert(UniqueCharacters.uniqueCharactersWithSet("No duplicates"))
+        XCTAssert(UniqueCharacters.uniqueCharactersWithSet("abcdefghijklmnopqrstuvwxyz"))
+        XCTAssert(UniqueCharacters.uniqueCharactersWithSet("AaBbCc"))
+        XCTAssertFalse(UniqueCharacters.uniqueCharactersWithSet("Hello, world"))
     }
     
-    func testUniqueCharactersPerf() {
-        let string = Helpers.generateRandomString()
+    func testUniqueCharactersWithSetPerf() {
+        let string = Helpers.generateRandomString(ofLength: 100000)
         self.measure {
-            XCTAssertFalse(UniqueCharacters.uniqueCharacters(string))
+            XCTAssertFalse(UniqueCharacters.uniqueCharactersWithSet(string))
         }
     }
     
-    func testUniqueCharacters2() {
-        XCTAssert(UniqueCharacters.uniqueCharacters2("No duplicates"))
-        XCTAssert(UniqueCharacters.uniqueCharacters2("abcdefghijklmnopqrstuvwxyz"))
-        XCTAssert(UniqueCharacters.uniqueCharacters2("AaBbCc"))
-        XCTAssertFalse(UniqueCharacters.uniqueCharacters2("Hello, world"))
+    func testUniqueCharactersWithLoop() {
+        XCTAssert(UniqueCharacters.uniqueCharactersWithLoop("No duplicates"))
+        XCTAssert(UniqueCharacters.uniqueCharactersWithLoop("abcdefghijklmnopqrstuvwxyz"))
+        XCTAssert(UniqueCharacters.uniqueCharactersWithLoop("AaBbCc"))
+        XCTAssertFalse(UniqueCharacters.uniqueCharactersWithLoop("Hello, world"))
     }
     
-    func testUniqueCharacters2Perf() {
-        let string = Helpers.generateRandomString()
+    func testUniqueCharactersWithLoopPerf() {
+        let string = Helpers.generateRandomString(ofLength: 100000)
         self.measure {
-            XCTAssertFalse(UniqueCharacters.uniqueCharacters2(string))
+            XCTAssertFalse(UniqueCharacters.uniqueCharactersWithLoop(string))
         }
     }
 }

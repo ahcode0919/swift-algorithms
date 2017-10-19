@@ -11,29 +11,31 @@ import XCTest
 
 class ContainsTests: XCTestCase {
     
-    func testContains() {
-        XCTAssertTrue(Contains.containsIgnoreCase("Test, Phrase", contains: "Test"))
-        XCTAssertTrue(Contains.containsIgnoreCase("Test, Phrase", contains: "TEST"))
-        XCTAssertFalse(Contains.containsIgnoreCase("Test, Phrase", contains: "False"))
+    func testContainsWithRange() {
+        XCTAssertTrue(Contains.containsIgnoreCaseWithRange("Test, Phrase", contains: "Test"))
+        XCTAssertTrue(Contains.containsIgnoreCaseWithRange("Test, Phrase", contains: "TEST"))
+        XCTAssertFalse(Contains.containsIgnoreCaseWithRange("Test, Phrase", contains: "False"))
     }
-
-    func testContainsPerf() {
+    
+    // Time ~ .035 sec
+    func testContainsWithRangePerf() {
         let testString = Helpers.generateRandomString()
         self.measure {
-            _ = Contains.containsIgnoreCase(testString, contains: "@")
+            _ = Contains.containsIgnoreCaseWithRange(testString, contains: "@")
         }
     }
     
-    func testContains2() {
-        XCTAssertTrue(Contains.containsIgnoreCase2("Test, Phrase", contains: "Test"))
-        XCTAssertTrue(Contains.containsIgnoreCase2("Test, Phrase", contains: "TEST"))
-        XCTAssertFalse(Contains.containsIgnoreCase2("Test, Phrase", contains: "False"))
+    func testContainsWithLoop() {
+        XCTAssertTrue(Contains.containsIgnoreCaseWithLoop("Test, Phrase", contains: "Test"))
+        XCTAssertTrue(Contains.containsIgnoreCaseWithLoop("Test, Phrase", contains: "TEST"))
+        XCTAssertFalse(Contains.containsIgnoreCaseWithLoop("Test, Phrase", contains: "False"))
     }
     
-    func testContains2Perf() {
+    // Time ~ 0.115 sec
+    func testContainsWithLoopPerf() {
         let testString = Helpers.generateRandomString()
         self.measure {
-            _ = Contains.containsIgnoreCase2(testString, contains: "@")
+            _ = Contains.containsIgnoreCaseWithLoop(testString, contains: "@")
         }
     }
 }

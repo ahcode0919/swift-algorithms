@@ -9,9 +9,9 @@
 import Foundation
 import XCTest
 
-class HelpersTests : XCTestCase {
+class HelpersTests: XCTestCase {
     func testGenerateRandomString() {
         let string = Helpers.generateRandomString(ofLength: 5)
-        XCTAssert(string.characters.count == 5)
+        XCTAssertEqual(string.characters.count, 5)
     }
 }

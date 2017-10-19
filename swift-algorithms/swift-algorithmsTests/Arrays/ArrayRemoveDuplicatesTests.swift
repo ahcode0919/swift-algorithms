@@ -17,9 +17,9 @@ class ArrayRemoveDuplicatesTests: XCTestCase {
         XCTAssertEqual(Set(uniqueArray).count, uniqueArray.count)
     }
     
-    /// Time ~ .500 sec
+    /// Time ~ .050 sec
     func testRemoveDuplicatesWithNSOrderedSetPerf() {
-        let testString = Helpers.generateRandomString()
+        let testString = Helpers.generateRandomString(ofLength: 100000)
         let array = Array(testString.characters)
         self.measure {
             _ = ArrayRemoveDuplicates.removeDuplicatesWithNSOrderedSet(array)
@@ -34,9 +34,9 @@ class ArrayRemoveDuplicatesTests: XCTestCase {
         XCTAssertEqual(Set(uniqueArray).count, uniqueArray.count)
     }
     
-    /// Time ~ 6.5 sec
+    /// Time ~ .700 sec
     func testRemoveDuplicatesWithReducePerf() {
-        let testString = Helpers.generateRandomString()
+        let testString = Helpers.generateRandomString(ofLength: 100000)
         let array = Array(testString.characters)
         self.measure {
             _ = ArrayRemoveDuplicates.removeDuplicatesWithReduce(array)
