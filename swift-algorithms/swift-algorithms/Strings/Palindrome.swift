@@ -11,7 +11,7 @@ import Foundation
 /// Check that a string is the same forwards and backwards, Ex: mom, dad, etc.
 class Palindrome {
     static func isPalindromeWithReverse(_ input: String) -> Bool {
-        if input.characters.count < 2 {
+        if input.count < 2 {
             return true
         }
         let lowercasedInput = input.lowercased()
@@ -19,12 +19,10 @@ class Palindrome {
     }
     
     static func isPalindromeWithArray(_ input: String) -> Bool {
-        var charView = input.lowercased().characters
+        var charArray = Array(input.lowercased())
         
-        while charView.count > 1,
-            let first = charView.popFirst(),
-            let last = charView.popLast() {
-            if last != first {
+        while charArray.count > 1, let last = charArray.popLast() {
+            if last != charArray.remove(at: 0) {
                 return false
             }
         }
