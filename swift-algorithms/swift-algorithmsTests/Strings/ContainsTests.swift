@@ -13,11 +13,10 @@ class ContainsTests: XCTestCase {
     
     func testContainsWithRange() {
         XCTAssertTrue(Contains.containsIgnoreCaseWithRange("Test, Phrase", contains: "Test"))
-        XCTAssertTrue(Contains.containsIgnoreCaseWithRange("Test, Phrase", contains: "TEST"))
         XCTAssertFalse(Contains.containsIgnoreCaseWithRange("Test, Phrase", contains: "False"))
     }
     
-    // Time ~ .035 sec
+    // Time ~ .016 sec
     func testContainsWithRangePerf() {
         let testString = Helpers.generateRandomString()
         self.measure {
@@ -27,15 +26,27 @@ class ContainsTests: XCTestCase {
     
     func testContainsWithLoop() {
         XCTAssertTrue(Contains.containsIgnoreCaseWithLoop("Test, Phrase", contains: "Test"))
-        XCTAssertTrue(Contains.containsIgnoreCaseWithLoop("Test, Phrase", contains: "TEST"))
         XCTAssertFalse(Contains.containsIgnoreCaseWithLoop("Test, Phrase", contains: "False"))
     }
     
-    // Time ~ 0.115 sec
+    // Time ~ 0.091 sec
     func testContainsWithLoopPerf() {
         let testString = Helpers.generateRandomString()
         self.measure {
             _ = Contains.containsIgnoreCaseWithLoop(testString, contains: "@")
+        }
+    }
+    
+    func testContainsWithStringAPI() {
+        XCTAssertTrue(Contains.containsWithStringAPI("Test, Phrase", contains: "Test"))
+        XCTAssertFalse(Contains.containsWithStringAPI("Test, Phrase", contains: "False"))
+    }
+    
+    // Time ~ 0.020
+    func testContainsWithStringAPIPerf() {
+        let testString = Helpers.generateRandomString()
+        self.measure {
+            _ = Contains.containsWithStringAPI(testString, contains: "@")
         }
     }
 }

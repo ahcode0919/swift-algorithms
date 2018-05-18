@@ -16,11 +16,7 @@ class Contains {
         if s1.count < s2.count || s1.isEmpty && s2.isEmpty {
             return false
         }
-        
-        let input1 = s1.lowercased()
-        let input2 = s2.lowercased()
-    
-        return input1.range(of: input2) != nil
+        return s1.range(of: s2) != nil
     }
     
     static func containsIgnoreCaseWithLoop(_ s1: String, contains s2: String) -> Bool {
@@ -28,8 +24,8 @@ class Contains {
             return false
         }
         
-        let input1 = Array(s1.lowercased())
-        let input2 = Array(s2.lowercased())
+        let input1 = Array(s1)
+        let input2 = Array(s2)
         
         var currentIndex = 0
         
@@ -48,5 +44,9 @@ class Contains {
             }
         }
         return false
+    }
+    
+    static func containsWithStringAPI(_ s1: String, contains s2: String) -> Bool {
+        return s1.contains(s2)
     }
 }
