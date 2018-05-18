@@ -9,6 +9,7 @@
 import Foundation
 
 /// Remove extra white space from String
+/// Swift Coding Challenges - #7
 class CondenseWhitespace {
     static func condenseWhitespaceWithLoop(_ text: String) -> String {
         var charArray = [Character]()

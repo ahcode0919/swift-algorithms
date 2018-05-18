@@ -8,6 +8,8 @@
 
 import Foundation
 
+/// Count the number of characters in a String
+/// Swift Coding Challenges - #5
 class CountCharacters {
     static func countOccurancesOfWithFilter(_ char: Character, in input: String) -> Int {
         return input.filter { (inputChar) -> Bool in

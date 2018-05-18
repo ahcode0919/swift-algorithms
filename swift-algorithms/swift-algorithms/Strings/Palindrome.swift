@@ -9,7 +9,9 @@
 import Foundation
 
 /// Check that a string is the same forwards and backwards, Ex: mom, dad, etc.
+/// Swift Coding Challenges - #2
 class Palindrome {
+    /// String.reversed() - O(1)
     static func isPalindromeWithReverse(_ input: String) -> Bool {
         if input.count < 2 {
             return true
