@@ -10,14 +10,14 @@ import Foundation
 
 class CountCharacters {
     static func countOccurancesOfWithFilter(_ char: Character, in input: String) -> Int {
-        return Array(input.characters).filter { (inputChar) -> Bool in
+        return input.filter { (inputChar) -> Bool in
             return inputChar == char
         }.count
     }
     
     static func countOccurancesOfWithLoop(_ char: Character, in input: String) -> Int {
         var count = 0
-        for inputChar in input.characters {
+        for inputChar in input {
             if inputChar == char {
                 count += 1
             }

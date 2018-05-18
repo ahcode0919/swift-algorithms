@@ -17,10 +17,10 @@ class UniqueCharacters {
     /// - Parameter input: input string
     /// - Returns: true if string consists of unique characters
     static func uniqueCharactersWithSet(_ input: String) -> Bool {
-        if input.characters.count < 2 {
+        if input.count < 2 {
             return true
         }
-        return input.characters.count == Set(input.characters).count
+        return input.count == Set(input).count
     }
     
     /// Checks if a String only contains unique Characters by iterating through the input and checking
@@ -29,12 +29,12 @@ class UniqueCharacters {
     /// - Parameter input: input String
     /// - Returns: true if string consists of unique characters
     static func uniqueCharactersWithLoop(_ input: String) -> Bool {
-        if input.characters.count < 2 {
+        if input.count < 2 {
             return true
         }
         var inputSet = Set<Character>()
         
-        for char in input.characters {
+        for char in input {
             if inputSet.contains(char) {
                 return false
             }

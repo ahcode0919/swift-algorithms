@@ -15,8 +15,9 @@ class SameCharacters {
             return false
         }
         
-        var input = s1.characters
-        var input2 = s2.characters
+        var input = Substring(s1)
+        var input2 = Substring(s2)
+        
         while input.count != 0 {
             if let char = input2.popFirst(), let index = input.index(of: char) {
                 input.remove(at: index)
@@ -31,7 +32,7 @@ class SameCharacters {
         if s1.count != s2.count {
             return false
         }
-        return s1.characters.sorted() == s2.characters.sorted()
+        return s1.sorted() == s2.sorted()
     }
     
     static func hasSameCharactersWithDictionary(_ s1: String, in s2: String) -> Bool {
@@ -42,7 +43,7 @@ class SameCharacters {
         var input1Dictionary = [Character: Int]()
         var input2Dictionary = [Character: Int]()
         
-        s1.characters.forEach { (char) in
+        s1.forEach { (char) in
             if var value = input1Dictionary[char] {
                 value += 1
             } else {
@@ -50,7 +51,7 @@ class SameCharacters {
             }
         }
         
-        s2.characters.forEach { (char) in
+        s2.forEach { (char) in
             if var value = input2Dictionary[char] {
                 value += 1
             } else {

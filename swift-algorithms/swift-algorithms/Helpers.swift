@@ -11,7 +11,7 @@ import GameKit
 
 class Helpers {
     static func generateRandomString(ofLength length: Int = 1000000) -> String {
-        let characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890 ".characters
+        let characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890 "
         let charCount = characters.count
         var wordArray = [Character](repeating: "0", count: length)
         let randomGenerator = GKRandomSource.sharedRandom()

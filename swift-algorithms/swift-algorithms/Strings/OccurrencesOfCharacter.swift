@@ -13,7 +13,7 @@ class OccurrencesOfCharacter {
     static func occurrencesOfWithLoop(_ input: Character, in text: String) -> Int {
         var count = 0
         
-        for char in text.characters {
+        for char in text {
             if char == input {
                 count += 1
             }
@@ -22,7 +22,7 @@ class OccurrencesOfCharacter {
     }
     
     static func occurrencesOfWithReduce(_ input: Character, in text: String) -> Int {
-        return text.characters.reduce(0) { (result, char) -> Int in
+        return text.reduce(0) { (result, char) -> Int in
             return char == input ? result + 1 : result
         }
     }

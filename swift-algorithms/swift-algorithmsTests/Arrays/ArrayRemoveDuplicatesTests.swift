@@ -11,7 +11,7 @@ import XCTest
 class ArrayRemoveDuplicatesTests: XCTestCase {
     func testRemoveDuplicatesWithNSOrderedSet() {
         let testString = Helpers.generateRandomString(ofLength: 50)
-        let array = Array(testString.characters)
+        let array = Array(testString)
         let uniqueArray = ArrayRemoveDuplicates.removeDuplicatesWithNSOrderedSet(array)
         
         XCTAssertEqual(Set(uniqueArray).count, uniqueArray.count)
@@ -20,7 +20,7 @@ class ArrayRemoveDuplicatesTests: XCTestCase {
     /// Time ~ .050 sec
     func testRemoveDuplicatesWithNSOrderedSetPerf() {
         let testString = Helpers.generateRandomString(ofLength: 100000)
-        let array = Array(testString.characters)
+        let array = Array(testString)
         self.measure {
             _ = ArrayRemoveDuplicates.removeDuplicatesWithNSOrderedSet(array)
         }
@@ -28,7 +28,7 @@ class ArrayRemoveDuplicatesTests: XCTestCase {
 
     func testRemoveDuplicatesWithReduce() {
         let testString = Helpers.generateRandomString(ofLength: 50)
-        let array = Array(testString.characters)
+        let array = Array(testString)
         let uniqueArray = ArrayRemoveDuplicates.removeDuplicatesWithReduce(array)
         
         XCTAssertEqual(Set(uniqueArray).count, uniqueArray.count)
@@ -37,7 +37,7 @@ class ArrayRemoveDuplicatesTests: XCTestCase {
     /// Time ~ .700 sec
     func testRemoveDuplicatesWithReducePerf() {
         let testString = Helpers.generateRandomString(ofLength: 100000)
-        let array = Array(testString.characters)
+        let array = Array(testString)
         self.measure {
             _ = ArrayRemoveDuplicates.removeDuplicatesWithReduce(array)
         }

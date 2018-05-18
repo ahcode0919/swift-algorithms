@@ -10,7 +10,7 @@ import Foundation
 
 class Contains {
     static func containsIgnoreCaseWithRange(_ s1: String, contains s2: String) -> Bool {
-        if s1.characters.count < s2.characters.count || s1.isEmpty && s2.isEmpty {
+        if s1.count < s2.count || s1.isEmpty && s2.isEmpty {
             return false
         }
         
@@ -21,12 +21,12 @@ class Contains {
     }
     
     static func containsIgnoreCaseWithLoop(_ s1: String, contains s2: String) -> Bool {
-        if s1.characters.count < s2.characters.count || s1.isEmpty && s2.isEmpty {
+        if s1.count < s2.count || s1.isEmpty && s2.isEmpty {
             return false
         }
         
-        let input1 = Array(s1.lowercased().characters)
-        let input2 = Array(s2.lowercased().characters)
+        let input1 = Array(s1.lowercased())
+        let input2 = Array(s2.lowercased())
         
         var currentIndex = 0
         
