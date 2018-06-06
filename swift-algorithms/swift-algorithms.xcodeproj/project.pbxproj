@@ -42,6 +42,8 @@
 		4094162120AE9A620013BCE2 /* PangramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4094162020AE9A620013BCE2 /* PangramTests.swift */; };
 		4094162320AEA00C0013BCE2 /* VowelsAndConsonants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4094162220AEA00C0013BCE2 /* VowelsAndConsonants.swift */; };
 		4094162520AEA0210013BCE2 /* VowelsAndConsonantsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4094162420AEA0210013BCE2 /* VowelsAndConsonantsTests.swift */; };
+		40EAACCC20C77186003E8ED6 /* CenturyFromYear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EAACCB20C77186003E8ED6 /* CenturyFromYear.swift */; };
+		40EAACCF20C771B4003E8ED6 /* CenturyFromYearTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EAACCE20C771B4003E8ED6 /* CenturyFromYearTests.swift */; };
 		40F75BE71F319F18000341E9 /* Palindrome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F75BE61F319F18000341E9 /* Palindrome.swift */; };
 /* End PBXBuildFile section */
 
@@ -100,6 +102,8 @@
 		4094162020AE9A620013BCE2 /* PangramTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PangramTests.swift; sourceTree = "<group>"; };
 		4094162220AEA00C0013BCE2 /* VowelsAndConsonants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VowelsAndConsonants.swift; sourceTree = "<group>"; };
 		4094162420AEA0210013BCE2 /* VowelsAndConsonantsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VowelsAndConsonantsTests.swift; sourceTree = "<group>"; };
+		40EAACCB20C77186003E8ED6 /* CenturyFromYear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenturyFromYear.swift; sourceTree = "<group>"; };
+		40EAACCE20C771B4003E8ED6 /* CenturyFromYearTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenturyFromYearTests.swift; sourceTree = "<group>"; };
 		40F75BE61F319F18000341E9 /* Palindrome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Palindrome.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -178,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				407D8C891F7BF45F004C6224 /* Arrays */,
+				40EAACCA20C7716E003E8ED6 /* Integers */,
 				4038A1C81F30523000056C9F /* Strings */,
 				4038A19A1F30431800056C9F /* AppDelegate.swift */,
 				4038A1C61F30434D00056C9F /* Helpers.swift */,
@@ -193,6 +198,7 @@
 		4038A1AC1F30431800056C9F /* swift-algorithmsTests */ = {
 			isa = PBXGroup;
 			children = (
+				40EAACCD20C7718C003E8ED6 /* Intergers */,
 				4027434B1F918B7D00D2E6FF /* Arrays */,
 				40001BC91F31A361001C099C /* Strings */,
 				4038A1CB1F3053D700056C9F /* HelpersTest.swift */,
@@ -234,6 +240,22 @@
 				407D8C8A1F7BF478004C6224 /* ArrayRemoveDuplicates.swift */,
 			);
 			path = Arrays;
+			sourceTree = "<group>";
+		};
+		40EAACCA20C7716E003E8ED6 /* Integers */ = {
+			isa = PBXGroup;
+			children = (
+				40EAACCB20C77186003E8ED6 /* CenturyFromYear.swift */,
+			);
+			path = Integers;
+			sourceTree = "<group>";
+		};
+		40EAACCD20C7718C003E8ED6 /* Intergers */ = {
+			isa = PBXGroup;
+			children = (
+				40EAACCE20C771B4003E8ED6 /* CenturyFromYearTests.swift */,
+			);
+			path = Intergers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -381,6 +403,7 @@
 				4038A1CA1F30524900056C9F /* UniqueCharacters.swift in Sources */,
 				4038A1CD1F30581700056C9F /* Helpers.swift in Sources */,
 				407E11981F32BF00007EFF9D /* RemoveDuplicates.swift in Sources */,
+				40EAACCC20C77186003E8ED6 /* CenturyFromYear.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,6 +424,7 @@
 				407E11961F326FE1007EFF9D /* CountCharactersTests.swift in Sources */,
 				4038A1CC1F3053D700056C9F /* HelpersTest.swift in Sources */,
 				407E119A1F32BF56007EFF9D /* RemoveDuplicateTests.swift in Sources */,
+				40EAACCF20C771B4003E8ED6 /* CenturyFromYearTests.swift in Sources */,
 				402743531F91931500D2E6FF /* OccurrencesOfCharacter.swift in Sources */,
 				402743591F919BFA00D2E6FF /* CondenseWhitespaceTests.swift in Sources */,
 				4027434E1F918C9B00D2E6FF /* ArrayRemoveDuplicates.swift in Sources */,
