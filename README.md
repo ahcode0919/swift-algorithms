@@ -13,11 +13,10 @@ including the year 200, etc.
 
 Example:
 
-For `year = 1905`, the output should be `centuryFromYear(year) = 20;``
-For `year = 1700`, the output should be `centuryFromYear(year) = 17`.
-
-[input] integer year - A positive integer, designating the year.
-[output] integer - The number of the century the year is in.
+* For `year = 1905`, the output should be `centuryFromYear(year) = 20`
+* For `year = 1700`, the output should be `centuryFromYear(year) = 17`
+* [input] integer year - A positive integer, designating the year.
+* [output] integer - The number of the century the year is in.
 
 ```
 static func centuryFromYear(year: Int) -> Int {
