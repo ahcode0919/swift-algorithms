@@ -119,6 +119,60 @@ static func condenseWhitespaceWithSplit(_ text: String) -> String {
 }
 ```
 
+#### Contains
+
+Check if one string contains another string
+
+Approach 1: Use `range(of:_)` String API function to check for presence of substring
+
+```
+static func containsWithRange(_ s1: String, contains s2: String) -> Bool {
+    if s1.count < s2.count || s1.isEmpty && s2.isEmpty {
+        return false
+    }
+    return s1.range(of: s2) != nil
+}
+```
+
+Approach 2: Use for loop to iterate across strings
+
+```
+static func containsWithLoop(_ s1: String, contains s2: String) -> Bool {
+    if s1.count < s2.count || s1.isEmpty && s2.isEmpty {
+        return false
+    }
+
+    let input1 = Array(s1)
+    let input2 = Array(s2)
+
+    var currentIndex = 0
+
+    while currentIndex < input1.count - input2.count {
+        var match = true
+        for i in 0..<input2.count {
+            if input1[currentIndex] != input2[i] {
+                currentIndex += 1
+                match = false
+                break
+            }
+            currentIndex += 1
+        }
+        if match {
+            return true
+        }
+    }
+    return false
+}
+```
+
+Approach 3: Use native String API `contains(:_)`
+
+```
+static func containsWithStringAPI(_ s1: String, contains s2: String) -> Bool {
+    return s1.contains(s2)
+}
+```
+
 #### Three Different Letters
 
 Write a function that accepts two strings, and returns true if they are identical in length
