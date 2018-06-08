@@ -66,6 +66,152 @@ static func centuryFromYear(year: Int) -> Int {
 
 ## Strings
 
+#### Condense Whitespace
+
+Remove the whitespace from a String.
+
+* Example: "Hello World" -> "HelloWorld"
+
+Approach 1: Remove Whitespace using a for loop and a character array
+```
+static func condenseWhitespaceWithLoop(_ text: String) -> String {
+    var charArray = [Character]()
+    var lastCharWasSpace = false
+
+    for char in text {
+        if lastCharWasSpace == false {
+            charArray.append(char)
+            if char == " " {
+                lastCharWasSpace = true
+            }
+        } else {
+            if char == " " {
+                continue
+            }
+            charArray.append(char)
+            lastCharWasSpace = false
+        }
+    }
+    return String(charArray)
+}
+```
+
+Approach 2: Utilize a regular expression to remove whitespace.
+
+```
+static func condenseWhitespaceWithRegex(_ text: String) -> String {
+    return text.replacingOccurrences(of: " +", with: " ", options: .regularExpression)
+}
+```
+
+Approach 3: Utilize the `split(separator:_)` String function remove whitespace
+and then `joined(separator:_)` to concatenate the result
+```
+static func condenseWhitespaceWithSplit(_ text: String) -> String {
+    var result = text.split(separator: " ").joined(separator: " ")
+    if text.first == " " {
+        result.insert(" ", at: result.startIndex)
+    }
+    if text.last == " " {
+        result.append(" ")
+    }
+    return result
+}
+```
+
+#### Contains
+
+Check if one string contains another string
+
+Approach 1: Use `range(of:_)` String API function to check for presence of substring
+
+```
+static func containsWithRange(_ s1: String, contains s2: String) -> Bool {
+    if s1.count < s2.count || s1.isEmpty && s2.isEmpty {
+        return false
+    }
+    return s1.range(of: s2) != nil
+}
+```
+
+Approach 2: Use for loop to iterate across strings
+
+```
+static func containsWithLoop(_ s1: String, contains s2: String) -> Bool {
+    if s1.count < s2.count || s1.isEmpty && s2.isEmpty {
+        return false
+    }
+
+    let input1 = Array(s1)
+    let input2 = Array(s2)
+
+    var currentIndex = 0
+
+    while currentIndex < input1.count - input2.count {
+        var match = true
+        for i in 0..<input2.count {
+            if input1[currentIndex] != input2[i] {
+                currentIndex += 1
+                match = false
+                break
+            }
+            currentIndex += 1
+        }
+        if match {
+            return true
+        }
+    }
+    return false
+}
+```
+
+Approach 3: Use native String API `contains(:_)`
+
+```
+static func containsWithStringAPI(_ s1: String, contains s2: String) -> Bool {
+    return s1.contains(s2)
+}
+```
+
+#### Count Occurrences of Character
+
+Count the number of times a character occurs in a String
+
+Approach 1 - Use filter to isolate occurrences
+
+```
+static func countOccurancesWithFilter(_ char: Character, in input: String) -> Int {
+        return input.filter { (inputChar) -> Bool in
+            return inputChar == char
+        }.count
+}
+```
+
+Approach 2 - Use a for loop to iterate over the input string
+
+```
+static func countOccurrencesWithLoop(_ input: Character, in text: String) -> Int {
+    var count = 0
+
+    for char in text {
+        if char == input {
+            count += 1
+        }
+    }
+    return count
+}
+```
+
+Approach 3 - Use the reduce function to iterate over the string and count occurrences
+
+```
+static func countOccurrencesWithReduce(_ input: Character, in text: String) -> Int {
+    return text.reduce(0) { (result, char) -> Int in
+        return char == input ? result + 1 : result
+    }
+}
+```
+
 #### Three Different Letters
 
 Write a function that accepts two strings, and returns true if they are identical in length

@@ -11,9 +11,24 @@ import XCTest
 
 class OccurrencesOfCharacterTests: XCTestCase {
     
+    func testCountCharactersWithFilter() {
+        XCTAssertTrue(OccurrencesOfCharacter.countOccurancesWithFilter("C", in: "Cash") == 1)
+        XCTAssertTrue(OccurrencesOfCharacter.countOccurancesWithFilter("C", in: "Test") == 0)
+        XCTAssertTrue(OccurrencesOfCharacter.countOccurancesWithFilter("c", in: "Cash") == 0)
+        XCTAssertTrue(OccurrencesOfCharacter.countOccurancesWithFilter("a", in: "") == 0)
+    }
+    
+    // Time ~ .030 sec
+    func testCountCharactersWithFilterPerf() {
+        let testString = Helpers.generateRandomString(ofLength: 100000)
+        self.measure {
+            _ = OccurrencesOfCharacter.countOccurancesWithFilter("a", in: testString)
+        }
+    }
+    
     func testOccurrencesOfCharacterWithLoop() {
         let testString = "ababababa"
-        let occurrences = OccurrencesOfCharacter.occurrencesOfWithLoop("b", in: testString)
+        let occurrences = OccurrencesOfCharacter.countOccurrencesWithLoop("b", in: testString)
         XCTAssertEqual(occurrences, 4)
     }
     
@@ -21,13 +36,13 @@ class OccurrencesOfCharacterTests: XCTestCase {
     func testOccurrencesOfCharacterWithLoopPerf() {
         let testString = Helpers.generateRandomString()
         self.measure {
-            _ = OccurrencesOfCharacter.occurrencesOfWithLoop("b", in: testString)
+            _ = OccurrencesOfCharacter.countOccurrencesWithLoop("b", in: testString)
         }
     }
     
     func testOccurrencesOfCharacterWithReduce() {
         let testString = "ababababa"
-        let occurrences = OccurrencesOfCharacter.occurrencesOfWithReduce("b", in: testString)
+        let occurrences = OccurrencesOfCharacter.countOccurrencesWithReduce("b", in: testString)
         XCTAssertEqual(occurrences, 4)
     }
     
@@ -35,7 +50,7 @@ class OccurrencesOfCharacterTests: XCTestCase {
     func testOccurrencesOfCharacterWithReducePerf() {
         let testString = Helpers.generateRandomString()
         self.measure {
-            _ = OccurrencesOfCharacter.occurrencesOfWithReduce("b", in: testString)
+            _ = OccurrencesOfCharacter.countOccurrencesWithReduce("b", in: testString)
         }
     }
 }
