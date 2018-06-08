@@ -3,9 +3,44 @@
 Repository of solutions to various problems and algorithms in Swift. Possible solutions
 and there performance trade offs are evaluated
 
+[Arrays](#arrays)
+
 [Integers](#integers)
 
 [Strings](#strings)
+
+## Arrays
+
+#### Remove Duplicates
+
+Find and remove duplicate elements from an Array
+
+Approach 1 - Use an NSOrderedSet to maintain order and return unique elements
+
+```
+static func removeDuplicatesWithNSOrderedSet<T>(_ array: [T]) -> [T] {
+    let set = NSOrderedSet(array: array)
+    guard let newArray = set.array as? [T] else {
+        return array
+    }
+    return newArray
+}
+```
+
+Approach 2 - Use `reduce(into:_)` to iterate through array
+
+```
+static func removeDuplicatesWithReduce<T: Equatable>(_ array: [T]) -> [T] {
+    return array.reduce(into: []) { (results, value) in
+        let elementPresent = results.contains() { (element) -> Bool in
+            element == value
+        }
+        if !elementPresent {
+            results.append(value)
+        }
+    }
+}
+```
 
 ## Integers
 
