@@ -9,8 +9,15 @@
 import Foundation
 
 /// Count the number of times a character occurs in a String
+/// Swift Coding Challenges - #5
 class OccurrencesOfCharacter {
-    static func occurrencesOfWithLoop(_ input: Character, in text: String) -> Int {
+    static func countOccurancesWithFilter(_ char: Character, in input: String) -> Int {
+        return input.filter { (inputChar) -> Bool in
+            return inputChar == char
+        }.count
+    }
+    
+    static func countOccurrencesWithLoop(_ input: Character, in text: String) -> Int {
         var count = 0
         
         for char in text {
@@ -21,7 +28,7 @@ class OccurrencesOfCharacter {
         return count
     }
     
-    static func occurrencesOfWithReduce(_ input: Character, in text: String) -> Int {
+    static func countOccurrencesWithReduce(_ input: Character, in text: String) -> Int {
         return text.reduce(0) { (result, char) -> Int in
             return char == input ? result + 1 : result
         }
