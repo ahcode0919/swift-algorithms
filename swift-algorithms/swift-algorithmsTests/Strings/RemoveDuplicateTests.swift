@@ -24,15 +24,15 @@ class RemoveDuplicatesTests: XCTestCase {
     }
 
     func testRemoveDuplicatesWithNSOrderedSetAndFilter() {
-        XCTAssertEqual(RemoveDuplicates.removeDuplicatesWithNSOrderedSetAndFilter(from: "Wombat"), "Wombat")
-        XCTAssertEqual(RemoveDuplicates.removeDuplicatesWithNSOrderedSetAndFilter(from: "hello"), "helo")
-        XCTAssertEqual(RemoveDuplicates.removeDuplicatesWithNSOrderedSetAndFilter(from: "Mississippi"), "Misp")
+        XCTAssertEqual(RemoveDuplicates.removeDuplicatesWithSetAndFilter(from: "Wombat"), "Wombat")
+        XCTAssertEqual(RemoveDuplicates.removeDuplicatesWithSetAndFilter(from: "hello"), "helo")
+        XCTAssertEqual(RemoveDuplicates.removeDuplicatesWithSetAndFilter(from: "Mississippi"), "Misp")
     }
     
     func testRemoveDuplicatesWithNSOrderedSetAndFilterPerf() {
         let testString = Helpers.generateRandomString(ofLength: 100000)
         self.measure {
-            _ = RemoveDuplicates.removeDuplicatesWithNSOrderedSetAndFilter(from: testString)
+            _ = RemoveDuplicates.removeDuplicatesWithSetAndFilter(from: testString)
         }
     }
     

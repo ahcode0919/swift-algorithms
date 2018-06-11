@@ -18,7 +18,7 @@ class RemoveDuplicates {
         return input
     }
     
-    static func removeDuplicatesWithNSOrderedSetAndFilter(from input: String) -> String {
+    static func removeDuplicatesWithSetAndFilter(from input: String) -> String {
         var duplicateSet = Set<Character>()
         var inputArray = Array(input)
         inputArray = inputArray.filter { (char) -> Bool in

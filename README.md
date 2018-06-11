@@ -294,6 +294,67 @@ static func isPangramWithLoop(_ s1: String) -> Bool {
 }
 ```
 
+#### Remove Duplicates
+
+Remove duplicate characters from a String
+
+Approach 1 - `NSOrderedSet`:
+
+```
+static func removeDuplicatesWithNSOrderedSet(from input: String) -> String {
+    let set = NSOrderedSet(array: Array(input))
+    if let array = set.array as? [Character] {
+        return String(array)
+    }
+    return input
+}
+```
+
+Approach 2 - Set / Filter:
+
+```  
+static func removeDuplicatesWithSetAndFilter(from input: String) -> String {
+    var duplicateSet = Set<Character>()
+    var inputArray = Array(input)
+    inputArray = inputArray.filter { (char) -> Bool in
+        if duplicateSet.contains(char) {
+            return false
+        }
+        duplicateSet.insert(char)
+        return true
+    }
+    return String(inputArray)
+}
+```
+
+Approach 3 - Filter:
+
+```
+static func removeDuplicatesWithFilter(from input: String) -> String {
+    var used = [Character]()
+    let uniqueChars = input.filter { (char) -> Bool in
+        if !used.contains(char) {
+            used.append(char)
+            return true
+        }
+        return false
+    }
+    return String(uniqueChars)
+}
+```
+
+Approach 4 - Dictionary / Filter:
+
+```
+static func removeDuplicatesWithDictionaryAndFilter(from input: String) -> String {
+    var uniqueDictionary = Dictionary<Character, Bool>()
+    let output = input.filter { (char) -> Bool in
+        return uniqueDictionary.updateValue(true, forKey: char) == nil
+    }
+    return String(output)
+}
+```
+
 #### Three Different Letters
 
 Write a function that accepts two strings, and returns true if they are identical in length
