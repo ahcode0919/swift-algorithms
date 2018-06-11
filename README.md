@@ -1,13 +1,15 @@
 # Swift Algorithms [![Build Status](https://travis-ci.org/ahcode0919/swift-algorithms.svg?branch=master)](https://travis-ci.org/ahcode0919/swift-algorithms)
 
-Repository of solutions to various problems and algorithms in Swift. Possible solutions
-and there performance trade offs are evaluated
+Repository of solutions to various problems and algorithms in Swift. For many
+problems many of the common approaches are presented. Some are more efficient than
+others. Xcode Project contains performance tests for those that are curious.
 
 [Arrays](#arrays)
 
 [Integers](#integers)
 
 [Strings](#strings)
+
 
 [Resources](#resources)
 
@@ -507,6 +509,28 @@ static func uniqueCharactersWithLoop(_ input: String) -> Bool {
         inputSet.insert(char)
     }
     return true
+}
+```
+
+#### Vowels and Consonants
+
+Count the number of vowels and consonants in a String
+
+```
+static let vowels = "aeiou"
+static let consonants = "bcdfghjklmnpqrstvwxyz"
+
+static func vowelsAndConsonantsForEach(_ s1: String) -> (vowels: Int, consonants: Int) {
+    let normalizedString = s1.lowercased()
+    var count: (vowels: Int, consonants: Int) = (vowels: 0, consonants: 0)
+    normalizedString.forEach {
+        if vowels.contains($0) {
+            count.vowels += 1
+        } else if consonants.contains($0) {
+            count.consonants += 1
+        }
+    }
+    return count
 }
 ```
 
