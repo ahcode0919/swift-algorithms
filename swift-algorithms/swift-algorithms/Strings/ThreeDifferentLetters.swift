@@ -10,7 +10,6 @@ import Foundation
 
 /// Write a function that accepts two strings, and returns true if they are identical in length
 /// but have no more than three different letters, taking case and string order into account.
-/// Swift Coding Challenges #11
 class ThreeDifferentLetters {
     static func threeDifferentLetters(s1: String, s2: String) -> Bool {
         guard s1.count == s2.count else {

@@ -9,7 +9,6 @@
 import Foundation
 
 /// Check that two strings have the same character (including matching casing)
-/// Swift Coding Challenges - #3
 class SameCharacters {
     static func hasSameCharactersWithLoop(_ s1: String, in s2: String) -> Bool {
         if s1.count != s2.count {

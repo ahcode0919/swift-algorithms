@@ -10,7 +10,6 @@ import Foundation
 
 /// Checks that a string is "Rotated" A string rotation is when you take a string, remove some letters from its end, then append them to the front.
 /// For example, “swift” rotated by two characters would be “ftswi”.
-/// Swift Coding Challenges - #8
 class RotatedString {
     static func isRotatedStringWithAddition(_ original: String, rotated: String) -> Bool {
         guard original.count == rotated.count else {
