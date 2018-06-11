@@ -9,6 +9,8 @@ and there performance trade offs are evaluated
 
 [Strings](#strings)
 
+[Resources](#resources)
+
 ## Arrays
 
 #### Remove Duplicates
@@ -160,7 +162,41 @@ static func containsWithStringAPI(_ s1: String, contains s2: String) -> Bool {
 }
 ```
 
-#### Count Occurrences of Character
+#### Find Longest Prefix
+
+Write a function that accepts a string of words with a similar prefix, separated by spaces,
+and returns the longest substring that prefixes all words.
+
+Example: "test tesx texx" -> "te"
+
+```
+static func findLongestPrefix(_ s1: String) -> String {
+    let words = s1.components(separatedBy: " ")
+
+    guard words.count > 1 else { return s1 }
+
+    var prefixEndIndex = words[0].endIndex
+
+    for index in 1..<words.count {
+        for position in words[index].indices {
+            //Return early if we've iterated to the max index of the last known prefix
+            if position > prefixEndIndex { break }
+
+            // Check if characters match
+            if words[0][position] == words[index][position] { continue }
+
+            // Set the max end index to the position of our invalid match
+            if prefixEndIndex > position {
+                prefixEndIndex = position
+                break
+            }
+        }
+    }
+    return String(words[0].prefix(upTo: prefixEndIndex))
+}
+```
+
+#### Occurrences of Character
 
 Count the number of times a character occurs in a String
 
@@ -195,37 +231,35 @@ static func countOccurrencesWithReduce(_ input: Character, in text: String) -> I
 }
 ```
 
-#### Find Longest Prefix
+#### Palindrome
 
-Write a function that accepts a string of words with a similar prefix, separated by spaces,
-and returns the longest substring that prefixes all words.
+Check that a string is the same forwards and backwards, Ex: mom, dad, etc.
 
-Example: "test tesx texx" -> "te"
+Approach 1 - `String.reversed()`:
 
 ```
-static func findLongestPrefix(_ s1: String) -> String {
-    let words = s1.components(separatedBy: " ")
-    
-    guard words.count > 1 else { return s1 }
+/// String.reversed() - O(1)
+static func isPalindromeWithReverse(_ input: String) -> Bool {
+    if input.count < 2 {
+        return true
+    }
+    let lowercasedInput = input.lowercased()
+    return lowercasedInput == String(lowercasedInput.reversed())
+}
+```
+s
+Approach 2 - Array:
 
-    var prefixEndIndex = words[0].endIndex
+```
+static func isPalindromeWithArray(_ input: String) -> Bool {
+    var charArray = Array(input.lowercased())
 
-    for index in 1..<words.count {
-        for position in words[index].indices {
-            //Return early if we've iterated to the max index of the last known prefix
-            if position > prefixEndIndex { break }
-
-            // Check if characters match
-            if words[0][position] == words[index][position] { continue }
-
-            // Set the max end index to the position of our invalid match
-            if prefixEndIndex > position {
-                prefixEndIndex = position
-                break
-            }
+    while charArray.count > 1, let last = charArray.popLast() {
+        if last != charArray.remove(at: 0) {
+            return false
         }
     }
-    return String(words[0].prefix(upTo: prefixEndIndex))
+    return true
 }
 ```
 
