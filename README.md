@@ -355,6 +355,39 @@ static func removeDuplicatesWithDictionaryAndFilter(from input: String) -> Strin
 }
 ```
 
+#### Rotated String
+
+Checks that a string is "Rotated" A string rotation is when you take a string,
+remove some letters from its end, then append them to the front. For example,
+“swift” rotated by two characters would be “ftswi”.
+
+Approach 1 - Concatenate the original string to itself:
+"swiftswift" contains "ftswi" -> true
+
+```
+static func isRotatedStringWithAddition(_ original: String, rotated: String) -> Bool {
+    guard original.count == rotated.count else { return false }
+
+    return (original + original).contains(rotated)
+}
+```
+
+Approach 2 - Rotate through string until a match is found:
+
+```
+static func isRotatedStringWithLoop(_ original: String, rotated: String) -> Bool {
+    guard original.count == rotated.count else { return false }
+
+    var tempString = original
+    for _ in 0..<original.count {
+        tempString.insert(tempString.last!, at: tempString.startIndex)
+        tempString = String(tempString.dropLast())
+        if tempString == rotated { return true }
+    }
+    return false
+}
+```
+
 #### Three Different Letters
 
 Write a function that accepts two strings, and returns true if they are identical in length

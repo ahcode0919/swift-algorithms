@@ -12,23 +12,19 @@ import Foundation
 /// For example, “swift” rotated by two characters would be “ftswi”.
 class RotatedString {
     static func isRotatedStringWithAddition(_ original: String, rotated: String) -> Bool {
-        guard original.count == rotated.count else {
-            return false
-        }
+        guard original.count == rotated.count else { return false }
+        
         return (original + original).contains(rotated)
     }
     
     static func isRotatedStringWithLoop(_ original: String, rotated: String) -> Bool {
-        guard original.count == rotated.count else {
-            return false
-        }
+        guard original.count == rotated.count else { return false }
+        
         var tempString = original
         for _ in 0..<original.count {
             tempString.insert(tempString.last!, at: tempString.startIndex)
             tempString = String(tempString.dropLast())
-            if tempString == rotated {
-                return true
-            }
+            if tempString == rotated { return true }
         }
         return false
     }
