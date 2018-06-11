@@ -11,6 +11,10 @@ and there performance trade offs are evaluated
 
 [Resources](#resources)
 
+[Author](#author)
+
+[License](#license)
+
 ## Arrays
 
 #### Remove Duplicates
@@ -460,18 +464,66 @@ Write a function that accepts two strings, and returns true if they are identica
 but have no more than three different letters, taking case and string order into account.
 
 ```
-  static func threeDifferentLetters(s1: String, s2: String) -> Bool {
-      guard s1.count == s2.count else { return false }
-      var count = 0
+static func threeDifferentLetters(s1: String, s2: String) -> Bool {
+    guard s1.count == s2.count else { return false }
+    var count = 0
 
-      for index in s1.indices {
-          if s1[index] == s2[index] { continue }
-          if count < 3 {
-              count += 1
-              continue
-          }
-          return false
-      }
-      return true
-  }
+    for index in s1.indices {
+        if s1[index] == s2[index] { continue }
+        if count < 3 {
+            count += 1
+            continue
+        }
+        return false
+    }
+    return true
+}
 ```
+
+#### Unique Characters
+
+Check if a string only consists of unique characters
+
+Approach 1 - Set:
+
+```
+static func uniqueCharactersWithSet(_ input: String) -> Bool {
+    if input.count < 2 { return true }
+
+    return input.count == Set(input).count
+}
+```
+
+Approach 2 - Loop:
+
+```
+static func uniqueCharactersWithLoop(_ input: String) -> Bool {
+    if input.count < 2 { return true }
+
+    var inputSet = Set<Character>()
+
+    for char in input {
+        if inputSet.contains(char) { return false }
+        inputSet.insert(char)
+    }
+    return true
+}
+```
+
+## Resources
+
+[Hacker Rank](https://www.hackerrank.com)
+
+[Leetcode](https://leetcode.com)
+
+[Cracking The Coding Interview - Gayle Laakmann McDowell](http://www.crackingthecodinginterview.com)
+
+[Swift Coding Challenges - Paul Hudson](https://www.hackingwithswift.com/store/swift-coding-challenges)
+
+## Author
+
+Aaron Hinton, ahcode0919@users.noreply.github.com
+
+## License
+
+This project is available under the MIT license. See the LICENSE file for more info.

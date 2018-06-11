@@ -8,7 +8,7 @@
 
 import Foundation
 
-///Functions to check if a string only consists of unique characters
+/// Check if a string only consists of unique characters
 class UniqueCharacters {
     
     /// Checks if a String only contains unique Characters by using a Set comparison
@@ -16,9 +16,8 @@ class UniqueCharacters {
     /// - Parameter input: input string
     /// - Returns: true if string consists of unique characters
     static func uniqueCharactersWithSet(_ input: String) -> Bool {
-        if input.count < 2 {
-            return true
-        }
+        if input.count < 2 { return true }
+        
         return input.count == Set(input).count
     }
     
@@ -28,15 +27,12 @@ class UniqueCharacters {
     /// - Parameter input: input String
     /// - Returns: true if string consists of unique characters
     static func uniqueCharactersWithLoop(_ input: String) -> Bool {
-        if input.count < 2 {
-            return true
-        }
+        if input.count < 2 { return true }
+        
         var inputSet = Set<Character>()
         
         for char in input {
-            if inputSet.contains(char) {
-                return false
-            }
+            if inputSet.contains(char) { return false }
             inputSet.insert(char)
         }
         return true
