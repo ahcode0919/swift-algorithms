@@ -263,6 +263,37 @@ static func isPalindromeWithArray(_ input: String) -> Bool {
 }
 ```
 
+#### Panagram
+
+Check if a String is a Pangram (Contains every letter of the alphabet)
+
+Approach 1 - Set:
+
+```
+static func isPangramWithSet(_ s1: String) -> Bool {
+    let s1Set = Set(s1.lowercased())
+    return s1Set.count == s1.count
+}
+```
+
+Approach 2 - Loop/Contains:
+
+```
+private static let alphabet = "abcdefghijklmnopqrstuvwxyz"
+
+static func isPangramWithLoop(_ s1: String) -> Bool {
+    let lowercased = s1.lowercased()
+
+    for letter in alphabet {
+        if lowercased.contains(letter) {
+            continue
+        }
+        return false
+    }
+    return true
+}
+```
+
 #### Three Different Letters
 
 Write a function that accepts two strings, and returns true if they are identical in length
