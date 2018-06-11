@@ -9,7 +9,6 @@
 import Foundation
 
 /// Check if one string contains another
-/// Swift Coding Challenges - #4
 class Contains {
     
     static func containsIgnoreCaseWithRange(_ s1: String, contains s2: String) -> Bool {

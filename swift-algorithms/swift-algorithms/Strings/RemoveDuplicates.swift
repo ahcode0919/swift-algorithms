@@ -9,7 +9,6 @@
 import Foundation
 
 /// Remove duplicate characters from a String
-/// Swift Coding Challenges - #6
 class RemoveDuplicates {
     static func removeDuplicatesWithNSOrderedSet(from input: String) -> String {
         let set = NSOrderedSet(array: Array(input))
@@ -19,7 +18,7 @@ class RemoveDuplicates {
         return input
     }
     
-    static func removeDuplicatesWithNSOrderedSetAndFilter(from input: String) -> String {
+    static func removeDuplicatesWithSetAndFilter(from input: String) -> String {
         var duplicateSet = Set<Character>()
         var inputArray = Array(input)
         inputArray = inputArray.filter { (char) -> Bool in

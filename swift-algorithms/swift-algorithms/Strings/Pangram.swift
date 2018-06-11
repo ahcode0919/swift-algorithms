@@ -9,7 +9,6 @@
 import Foundation
 
 /// Check if a String is a Pangram (Contains every letter of the alphabet)
-/// Swift Coding Challenges - #9
 class Pangram {
     private static let alphabet = "abcdefghijklmnopqrstuvwxyz"
     

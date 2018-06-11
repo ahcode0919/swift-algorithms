@@ -9,7 +9,6 @@
 import Foundation
 
 /// Count the number of times a character occurs in a String
-/// Swift Coding Challenges - #5
 class OccurrencesOfCharacter {
     static func countOccurancesWithFilter(_ char: Character, in input: String) -> Int {
         return input.filter { (inputChar) -> Bool in
