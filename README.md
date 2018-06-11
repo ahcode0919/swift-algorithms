@@ -81,13 +81,9 @@ static func condenseWhitespaceWithLoop(_ text: String) -> String {
     for char in text {
         if lastCharWasSpace == false {
             charArray.append(char)
-            if char == " " {
-                lastCharWasSpace = true
-            }
+            if char == " " { lastCharWasSpace = true }
         } else {
-            if char == " " {
-                continue
-            }
+            if char == " " { continue }
             charArray.append(char)
             lastCharWasSpace = false
         }
@@ -109,12 +105,9 @@ and then `joined(separator:_)` to concatenate the result
 ```
 static func condenseWhitespaceWithSplit(_ text: String) -> String {
     var result = text.split(separator: " ").joined(separator: " ")
-    if text.first == " " {
-        result.insert(" ", at: result.startIndex)
-    }
-    if text.last == " " {
-        result.append(" ")
-    }
+
+    if text.first == " " { result.insert(" ", at: result.startIndex) }
+    if text.last == " " { result.append(" ") }
     return result
 }
 ```
@@ -127,9 +120,7 @@ Approach 1: Use `range(of:_)` String API function to check for presence of subst
 
 ```
 static func containsWithRange(_ s1: String, contains s2: String) -> Bool {
-    if s1.count < s2.count || s1.isEmpty && s2.isEmpty {
-        return false
-    }
+    if s1.count < s2.count || s1.isEmpty && s2.isEmpty { return false }
     return s1.range(of: s2) != nil
 }
 ```
@@ -138,9 +129,7 @@ Approach 2: Use for loop to iterate across strings
 
 ```
 static func containsWithLoop(_ s1: String, contains s2: String) -> Bool {
-    if s1.count < s2.count || s1.isEmpty && s2.isEmpty {
-        return false
-    }
+    if s1.count < s2.count || s1.isEmpty && s2.isEmpty { return false }
 
     let input1 = Array(s1)
     let input2 = Array(s2)
@@ -157,9 +146,7 @@ static func containsWithLoop(_ s1: String, contains s2: String) -> Bool {
             }
             currentIndex += 1
         }
-        if match {
-            return true
-        }
+        if match { return true }
     }
     return false
 }
@@ -181,9 +168,7 @@ Approach 1 - Use filter to isolate occurrences
 
 ```
 static func countOccurancesWithFilter(_ char: Character, in input: String) -> Int {
-        return input.filter { (inputChar) -> Bool in
-            return inputChar == char
-        }.count
+        return input.filter { (inputChar) -> Bool in return inputChar == char }.count
 }
 ```
 
@@ -194,9 +179,7 @@ static func countOccurrencesWithLoop(_ input: Character, in text: String) -> Int
     var count = 0
 
     for char in text {
-        if char == input {
-            count += 1
-        }
+        if char == input { count += 1 }
     }
     return count
 }
@@ -209,6 +192,40 @@ static func countOccurrencesWithReduce(_ input: Character, in text: String) -> I
     return text.reduce(0) { (result, char) -> Int in
         return char == input ? result + 1 : result
     }
+}
+```
+
+#### Find Longest Prefix
+
+Write a function that accepts a string of words with a similar prefix, separated by spaces,
+and returns the longest substring that prefixes all words.
+
+Example: "test tesx texx" -> "te"
+
+```
+static func findLongestPrefix(_ s1: String) -> String {
+    let words = s1.components(separatedBy: " ")
+    
+    guard words.count > 1 else { return s1 }
+
+    var prefixEndIndex = words[0].endIndex
+
+    for index in 1..<words.count {
+        for position in words[index].indices {
+            //Return early if we've iterated to the max index of the last known prefix
+            if position > prefixEndIndex { break }
+
+            // Check if characters match
+            if words[0][position] == words[index][position] { continue }
+
+            // Set the max end index to the position of our invalid match
+            if prefixEndIndex > position {
+                prefixEndIndex = position
+                break
+            }
+        }
+    }
+    return String(words[0].prefix(upTo: prefixEndIndex))
 }
 ```
 

@@ -43,6 +43,8 @@
 		40EAACCF20C771B4003E8ED6 /* CenturyFromYearTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EAACCE20C771B4003E8ED6 /* CenturyFromYearTests.swift */; };
 		40EAAD3B20CA5077003E8ED6 /* ThreeDifferentLetters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EAAD3A20CA5077003E8ED6 /* ThreeDifferentLetters.swift */; };
 		40EAAD3D20CA578A003E8ED6 /* ThreeDifferentLettersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EAAD3C20CA578A003E8ED6 /* ThreeDifferentLettersTests.swift */; };
+		40EAAD3F20CB0F25003E8ED6 /* FindLongestPrefix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EAAD3E20CB0F25003E8ED6 /* FindLongestPrefix.swift */; };
+		40EAAD4120CB4982003E8ED6 /* FindLongestPrefixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EAAD4020CB4982003E8ED6 /* FindLongestPrefixTests.swift */; };
 		40F75BE71F319F18000341E9 /* Palindrome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F75BE61F319F18000341E9 /* Palindrome.swift */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +105,8 @@
 		40EAACCE20C771B4003E8ED6 /* CenturyFromYearTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenturyFromYearTests.swift; sourceTree = "<group>"; };
 		40EAAD3A20CA5077003E8ED6 /* ThreeDifferentLetters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeDifferentLetters.swift; sourceTree = "<group>"; };
 		40EAAD3C20CA578A003E8ED6 /* ThreeDifferentLettersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeDifferentLettersTests.swift; sourceTree = "<group>"; };
+		40EAAD3E20CB0F25003E8ED6 /* FindLongestPrefix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindLongestPrefix.swift; sourceTree = "<group>"; };
+		40EAAD4020CB4982003E8ED6 /* FindLongestPrefixTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindLongestPrefixTests.swift; sourceTree = "<group>"; };
 		40F75BE61F319F18000341E9 /* Palindrome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Palindrome.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -136,6 +140,7 @@
 			children = (
 				402743581F919BFA00D2E6FF /* CondenseWhitespaceTests.swift */,
 				407E11911F31BD32007EFF9D /* ContainsTests.swift */,
+				40EAAD4020CB4982003E8ED6 /* FindLongestPrefixTests.swift */,
 				402743541F91948D00D2E6FF /* OccurrencesOfCharacterTests.swift */,
 				40001BC71F31A211001C099C /* PalindromeTests.swift */,
 				4094162020AE9A620013BCE2 /* PangramTests.swift */,
@@ -220,6 +225,7 @@
 			children = (
 				407E119B1F330A41007EFF9D /* CondenseWhitespace.swift */,
 				407E118F1F31B963007EFF9D /* Contains.swift */,
+				40EAAD3E20CB0F25003E8ED6 /* FindLongestPrefix.swift */,
 				402743511F91931500D2E6FF /* OccurrencesOfCharacter.swift */,
 				40F75BE61F319F18000341E9 /* Palindrome.swift */,
 				4094161E20AE965E0013BCE2 /* Pangram.swift */,
@@ -399,6 +405,7 @@
 				407D8C8B1F7BF478004C6224 /* ArrayRemoveDuplicates.swift in Sources */,
 				4038A19B1F30431800056C9F /* AppDelegate.swift in Sources */,
 				407E11901F31B963007EFF9D /* Contains.swift in Sources */,
+				40EAAD3F20CB0F25003E8ED6 /* FindLongestPrefix.swift in Sources */,
 				4038A1CA1F30524900056C9F /* UniqueCharacters.swift in Sources */,
 				4038A1CD1F30581700056C9F /* Helpers.swift in Sources */,
 				407E11981F32BF00007EFF9D /* RemoveDuplicates.swift in Sources */,
@@ -418,6 +425,7 @@
 				4038A1CE1F30582000056C9F /* Helpers.swift in Sources */,
 				407E11921F31BD32007EFF9D /* ContainsTests.swift in Sources */,
 				40EAAD3D20CA578A003E8ED6 /* ThreeDifferentLettersTests.swift in Sources */,
+				40EAAD4120CB4982003E8ED6 /* FindLongestPrefixTests.swift in Sources */,
 				407E118E1F31AC8F007EFF9D /* SameCharactersTests.swift in Sources */,
 				40001BC81F31A211001C099C /* PalindromeTests.swift in Sources */,
 				4038A1CC1F3053D700056C9F /* HelpersTest.swift in Sources */,
