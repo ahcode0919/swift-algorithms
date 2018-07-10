@@ -39,6 +39,9 @@
 		4094162120AE9A620013BCE2 /* PangramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4094162020AE9A620013BCE2 /* PangramTests.swift */; };
 		4094162320AEA00C0013BCE2 /* VowelsAndConsonants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4094162220AEA00C0013BCE2 /* VowelsAndConsonants.swift */; };
 		4094162520AEA0210013BCE2 /* VowelsAndConsonantsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4094162420AEA0210013BCE2 /* VowelsAndConsonantsTests.swift */; };
+		40AEC5E220F5768400CCC9C7 /* ArrayFirstDuplicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AEC5E120F5768400CCC9C7 /* ArrayFirstDuplicate.swift */; };
+		40AEC5E320F5769100CCC9C7 /* ArrayFirstDuplicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AEC5E120F5768400CCC9C7 /* ArrayFirstDuplicate.swift */; };
+		40AEC5E520F576A600CCC9C7 /* ArrayFirstDuplicateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AEC5E420F576A600CCC9C7 /* ArrayFirstDuplicateTests.swift */; };
 		40EAACCC20C77186003E8ED6 /* CenturyFromYear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EAACCB20C77186003E8ED6 /* CenturyFromYear.swift */; };
 		40EAACCF20C771B4003E8ED6 /* CenturyFromYearTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EAACCE20C771B4003E8ED6 /* CenturyFromYearTests.swift */; };
 		40EAAD3B20CA5077003E8ED6 /* ThreeDifferentLetters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EAAD3A20CA5077003E8ED6 /* ThreeDifferentLetters.swift */; };
@@ -101,6 +104,8 @@
 		4094162020AE9A620013BCE2 /* PangramTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PangramTests.swift; sourceTree = "<group>"; };
 		4094162220AEA00C0013BCE2 /* VowelsAndConsonants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VowelsAndConsonants.swift; sourceTree = "<group>"; };
 		4094162420AEA0210013BCE2 /* VowelsAndConsonantsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VowelsAndConsonantsTests.swift; sourceTree = "<group>"; };
+		40AEC5E120F5768400CCC9C7 /* ArrayFirstDuplicate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayFirstDuplicate.swift; sourceTree = "<group>"; };
+		40AEC5E420F576A600CCC9C7 /* ArrayFirstDuplicateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayFirstDuplicateTests.swift; sourceTree = "<group>"; };
 		40EAACCB20C77186003E8ED6 /* CenturyFromYear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenturyFromYear.swift; sourceTree = "<group>"; };
 		40EAACCE20C771B4003E8ED6 /* CenturyFromYearTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenturyFromYearTests.swift; sourceTree = "<group>"; };
 		40EAAD3A20CA5077003E8ED6 /* ThreeDifferentLetters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeDifferentLetters.swift; sourceTree = "<group>"; };
@@ -157,6 +162,7 @@
 		4027434B1F918B7D00D2E6FF /* Arrays */ = {
 			isa = PBXGroup;
 			children = (
+				40AEC5E420F576A600CCC9C7 /* ArrayFirstDuplicateTests.swift */,
 				4027434C1F918B9500D2E6FF /* ArrayRemoveDuplicatesTests.swift */,
 			);
 			path = Arrays;
@@ -242,6 +248,7 @@
 		407D8C891F7BF45F004C6224 /* Arrays */ = {
 			isa = PBXGroup;
 			children = (
+				40AEC5E120F5768400CCC9C7 /* ArrayFirstDuplicate.swift */,
 				407D8C8A1F7BF478004C6224 /* ArrayRemoveDuplicates.swift */,
 			);
 			path = Arrays;
@@ -397,6 +404,7 @@
 				4094162320AEA00C0013BCE2 /* VowelsAndConsonants.swift in Sources */,
 				407E119C1F330A41007EFF9D /* CondenseWhitespace.swift in Sources */,
 				4094161F20AE965E0013BCE2 /* Pangram.swift in Sources */,
+				40AEC5E220F5768400CCC9C7 /* ArrayFirstDuplicate.swift in Sources */,
 				402743521F91931500D2E6FF /* OccurrencesOfCharacter.swift in Sources */,
 				4027435B1F91ADDB00D2E6FF /* RotatedString.swift in Sources */,
 				407E118C1F31A4CE007EFF9D /* SameCharacters.swift in Sources */,
@@ -427,11 +435,13 @@
 				40EAAD3D20CA578A003E8ED6 /* ThreeDifferentLettersTests.swift in Sources */,
 				40EAAD4120CB4982003E8ED6 /* FindLongestPrefixTests.swift in Sources */,
 				407E118E1F31AC8F007EFF9D /* SameCharactersTests.swift in Sources */,
+				40AEC5E320F5769100CCC9C7 /* ArrayFirstDuplicate.swift in Sources */,
 				40001BC81F31A211001C099C /* PalindromeTests.swift in Sources */,
 				4038A1CC1F3053D700056C9F /* HelpersTest.swift in Sources */,
 				407E119A1F32BF56007EFF9D /* RemoveDuplicateTests.swift in Sources */,
 				40EAACCF20C771B4003E8ED6 /* CenturyFromYearTests.swift in Sources */,
 				402743531F91931500D2E6FF /* OccurrencesOfCharacter.swift in Sources */,
+				40AEC5E520F576A600CCC9C7 /* ArrayFirstDuplicateTests.swift in Sources */,
 				402743591F919BFA00D2E6FF /* CondenseWhitespaceTests.swift in Sources */,
 				4027434E1F918C9B00D2E6FF /* ArrayRemoveDuplicates.swift in Sources */,
 				402743551F91948D00D2E6FF /* OccurrencesOfCharacterTests.swift in Sources */,
