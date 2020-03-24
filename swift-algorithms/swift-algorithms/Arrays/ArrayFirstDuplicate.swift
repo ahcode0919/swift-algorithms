@@ -9,6 +9,7 @@
 import Foundation
 
 class ArrayFirstDuplicate {
+
     static func firstDuplicate(_ array: Array<Int>) -> Int? {
         var uniqueNums = Set<Int>()
         
