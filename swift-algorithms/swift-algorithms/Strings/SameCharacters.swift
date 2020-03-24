@@ -18,7 +18,7 @@ class SameCharacters {
         var input2 = Substring(s2)
         
         while input.count != 0 {
-            if let char = input2.popFirst(), let index = input.index(of: char) {
+            if let char = input2.popFirst(), let index = input.firstIndex(of: char) {
                 input.remove(at: index)
                 continue
             }
