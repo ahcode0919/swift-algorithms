@@ -39,6 +39,10 @@
 		4094162120AE9A620013BCE2 /* PangramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4094162020AE9A620013BCE2 /* PangramTests.swift */; };
 		4094162320AEA00C0013BCE2 /* VowelsAndConsonants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4094162220AEA00C0013BCE2 /* VowelsAndConsonants.swift */; };
 		4094162520AEA0210013BCE2 /* VowelsAndConsonantsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4094162420AEA0210013BCE2 /* VowelsAndConsonantsTests.swift */; };
+		40AEC5E720F589F700CCC9C7 /* FirstNotRepeatingCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AEC5E620F589F700CCC9C7 /* FirstNotRepeatingCharacter.swift */; };
+		40AEC5E920F58A2E00CCC9C7 /* FirstNotRepeatingCharacterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AEC5E820F58A2E00CCC9C7 /* FirstNotRepeatingCharacterTests.swift */; };
+		40AEC5EA20F58A6700CCC9C7 /* FirstNotRepeatingCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AEC5E620F589F700CCC9C7 /* FirstNotRepeatingCharacter.swift */; };
+		40C0236C242A90B5009E4830 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 40C0236B242A90B5009E4830 /* README.md */; };
 		40EAACCC20C77186003E8ED6 /* CenturyFromYear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EAACCB20C77186003E8ED6 /* CenturyFromYear.swift */; };
 		40EAACCF20C771B4003E8ED6 /* CenturyFromYearTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EAACCE20C771B4003E8ED6 /* CenturyFromYearTests.swift */; };
 		40EAAD3B20CA5077003E8ED6 /* ThreeDifferentLetters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EAAD3A20CA5077003E8ED6 /* ThreeDifferentLetters.swift */; };
@@ -101,6 +105,10 @@
 		4094162020AE9A620013BCE2 /* PangramTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PangramTests.swift; sourceTree = "<group>"; };
 		4094162220AEA00C0013BCE2 /* VowelsAndConsonants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VowelsAndConsonants.swift; sourceTree = "<group>"; };
 		4094162420AEA0210013BCE2 /* VowelsAndConsonantsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VowelsAndConsonantsTests.swift; sourceTree = "<group>"; };
+		40AEC5E620F589F700CCC9C7 /* FirstNotRepeatingCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstNotRepeatingCharacter.swift; sourceTree = "<group>"; };
+		40AEC5E820F58A2E00CCC9C7 /* FirstNotRepeatingCharacterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstNotRepeatingCharacterTests.swift; sourceTree = "<group>"; };
+		40C0236B242A90B5009E4830 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		40C0236D242A9188009E4830 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		40EAACCB20C77186003E8ED6 /* CenturyFromYear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenturyFromYear.swift; sourceTree = "<group>"; };
 		40EAACCE20C771B4003E8ED6 /* CenturyFromYearTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenturyFromYearTests.swift; sourceTree = "<group>"; };
 		40EAAD3A20CA5077003E8ED6 /* ThreeDifferentLetters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeDifferentLetters.swift; sourceTree = "<group>"; };
@@ -141,6 +149,7 @@
 				402743581F919BFA00D2E6FF /* CondenseWhitespaceTests.swift */,
 				407E11911F31BD32007EFF9D /* ContainsTests.swift */,
 				40EAAD4020CB4982003E8ED6 /* FindLongestPrefixTests.swift */,
+				40AEC5E820F58A2E00CCC9C7 /* FirstNotRepeatingCharacterTests.swift */,
 				402743541F91948D00D2E6FF /* OccurrencesOfCharacterTests.swift */,
 				40001BC71F31A211001C099C /* PalindromeTests.swift */,
 				4094162020AE9A620013BCE2 /* PangramTests.swift */,
@@ -165,6 +174,7 @@
 		4038A18E1F30431700056C9F = {
 			isa = PBXGroup;
 			children = (
+				40C0236B242A90B5009E4830 /* README.md */,
 				4038A1991F30431800056C9F /* swift-algorithms */,
 				4038A1AC1F30431800056C9F /* swift-algorithmsTests */,
 				4038A1B71F30431800056C9F /* swift-algorithmsUITests */,
@@ -226,6 +236,7 @@
 				407E119B1F330A41007EFF9D /* CondenseWhitespace.swift */,
 				407E118F1F31B963007EFF9D /* Contains.swift */,
 				40EAAD3E20CB0F25003E8ED6 /* FindLongestPrefix.swift */,
+				40AEC5E620F589F700CCC9C7 /* FirstNotRepeatingCharacter.swift */,
 				402743511F91931500D2E6FF /* OccurrencesOfCharacter.swift */,
 				40F75BE61F319F18000341E9 /* Palindrome.swift */,
 				4094161E20AE965E0013BCE2 /* Pangram.swift */,
@@ -235,6 +246,7 @@
 				40EAAD3A20CA5077003E8ED6 /* ThreeDifferentLetters.swift */,
 				4038A1C91F30524900056C9F /* UniqueCharacters.swift */,
 				4094162220AEA00C0013BCE2 /* VowelsAndConsonants.swift */,
+				40C0236D242A9188009E4830 /* README.md */,
 			);
 			path = Strings;
 			sourceTree = "<group>";
@@ -326,18 +338,21 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0900;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "No Name Software";
 				TargetAttributes = {
 					4038A1961F30431800056C9F = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 1130;
 					};
 					4038A1A81F30431800056C9F = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 1130;
 						TestTargetID = 4038A1961F30431800056C9F;
 					};
 					4038A1B31F30431800056C9F = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 1130;
 						TestTargetID = 4038A1961F30431800056C9F;
 					};
 				};
@@ -367,6 +382,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40C0236C242A90B5009E4830 /* README.md in Resources */,
 				4038A19F1F30431800056C9F /* Assets.xcassets in Resources */,
 				4038A1A21F30431800056C9F /* Main.storyboard in Resources */,
 			);
@@ -395,6 +411,7 @@
 			files = (
 				4038A19D1F30431800056C9F /* ViewController.swift in Sources */,
 				4094162320AEA00C0013BCE2 /* VowelsAndConsonants.swift in Sources */,
+				40AEC5E720F589F700CCC9C7 /* FirstNotRepeatingCharacter.swift in Sources */,
 				407E119C1F330A41007EFF9D /* CondenseWhitespace.swift in Sources */,
 				4094161F20AE965E0013BCE2 /* Pangram.swift in Sources */,
 				402743521F91931500D2E6FF /* OccurrencesOfCharacter.swift in Sources */,
@@ -429,10 +446,12 @@
 				407E118E1F31AC8F007EFF9D /* SameCharactersTests.swift in Sources */,
 				40001BC81F31A211001C099C /* PalindromeTests.swift in Sources */,
 				4038A1CC1F3053D700056C9F /* HelpersTest.swift in Sources */,
+				40AEC5E920F58A2E00CCC9C7 /* FirstNotRepeatingCharacterTests.swift in Sources */,
 				407E119A1F32BF56007EFF9D /* RemoveDuplicateTests.swift in Sources */,
 				40EAACCF20C771B4003E8ED6 /* CenturyFromYearTests.swift in Sources */,
 				402743531F91931500D2E6FF /* OccurrencesOfCharacter.swift in Sources */,
 				402743591F919BFA00D2E6FF /* CondenseWhitespaceTests.swift in Sources */,
+				40AEC5EA20F58A6700CCC9C7 /* FirstNotRepeatingCharacter.swift in Sources */,
 				4027434E1F918C9B00D2E6FF /* ArrayRemoveDuplicates.swift in Sources */,
 				402743551F91948D00D2E6FF /* OccurrencesOfCharacterTests.swift in Sources */,
 				4094162120AE9A620013BCE2 /* PangramTests.swift in Sources */,
@@ -591,13 +610,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "swift-algorithms/swift_algorithms.entitlements";
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 92P37DJX69;
 				INFOPLIST_FILE = "swift-algorithms/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nns.swift-algorithms";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -606,13 +626,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "swift-algorithms/swift_algorithms.entitlements";
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 92P37DJX69;
 				INFOPLIST_FILE = "swift-algorithms/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nns.swift-algorithms";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -627,7 +648,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nns.swift-algorithmsTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/swift-algorithms.app/Contents/MacOS/swift-algorithms";
 			};
 			name = Debug;
@@ -643,7 +664,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nns.swift-algorithmsTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/swift-algorithms.app/Contents/MacOS/swift-algorithms";
 			};
 			name = Release;
@@ -658,7 +679,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nns.swift-algorithmsUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = "swift-algorithms";
 			};
 			name = Debug;
@@ -673,7 +694,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nns.swift-algorithmsUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = "swift-algorithms";
 			};
 			name = Release;
