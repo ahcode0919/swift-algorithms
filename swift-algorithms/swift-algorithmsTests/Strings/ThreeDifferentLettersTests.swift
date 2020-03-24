@@ -25,7 +25,7 @@ class ThreeDifferentLettersTests: XCTestCase {
         XCTAssertFalse(ThreeDifferentLetters.threeDifferentLetters(s1: string1, s2: string2))
     }
     
-    func testThreeDifferentLettersPerformance() {
+    func testThreeDifferentLettersPerf() {
         let testString1 = Helpers.generateRandomString()
         let testString2 = testString1
         
