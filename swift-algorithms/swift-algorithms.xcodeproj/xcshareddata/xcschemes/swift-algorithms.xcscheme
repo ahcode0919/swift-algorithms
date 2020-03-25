@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   LastUpgradeVersion = "1130"
+   version = "1.3">
+   <BuildAction
+      parallelizeBuildables = "YES"
+      buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "4038A1961F30431800056C9F"
+               BuildableName = "swift-algorithms.app"
+               BlueprintName = "swift-algorithms"
+               ReferencedContainer = "container:swift-algorithms.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "YES"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "4038A1A81F30431800056C9F"
+               BuildableName = "swift-algorithmsTests.xctest"
+               BlueprintName = "swift-algorithmsTests"
+               ReferencedContainer = "container:swift-algorithms.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "YES"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "4038A1B31F30431800056C9F"
+               BuildableName = "swift-algorithmsUITests.xctest"
+               BlueprintName = "swift-algorithmsUITests"
+               ReferencedContainer = "container:swift-algorithms.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = ""
+      selectedLauncherIdentifier = "Xcode.IDEFoundation.Launcher.PosixSpawn"
+      shouldUseLaunchSchemeArgsEnv = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "4038A1961F30431800056C9F"
+            BuildableName = "swift-algorithms.app"
+            BlueprintName = "swift-algorithms"
+            ReferencedContainer = "container:swift-algorithms.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+      <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "4038A1A81F30431800056C9F"
+               BuildableName = "swift-algorithmsTests.xctest"
+               BlueprintName = "swift-algorithmsTests"
+               ReferencedContainer = "container:swift-algorithms.xcodeproj">
+            </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "ArrayRemoveDuplicatesTests/testRemoveDuplicatesWithNSOrderedSetPerf()">
+               </Test>
+               <Test
+                  Identifier = "ArrayRemoveDuplicatesTests/testRemoveDuplicatesWithReducePerf()">
+               </Test>
+               <Test
+                  Identifier = "CondenseWhitespaceTests/testCondenseWhitespaceWithLoopPerf()">
+               </Test>
+               <Test
+                  Identifier = "CondenseWhitespaceTests/testCondenseWhitespaceWithRegexPerf()">
+               </Test>
+               <Test
+                  Identifier = "CondenseWhitespaceTests/testCondenseWhitespaceWithSplitPerf()">
+               </Test>
+               <Test
+                  Identifier = "ContainsTests/testContainsWithLoopPerf()">
+               </Test>
+               <Test
+                  Identifier = "ContainsTests/testContainsWithRangePerf()">
+               </Test>
+               <Test
+                  Identifier = "ContainsTests/testContainsWithStringAPIPerf()">
+               </Test>
+               <Test
+                  Identifier = "FindLongestPrefixTests/testFindLongestPrefixPerformance()">
+               </Test>
+               <Test
+                  Identifier = "OccurrencesOfCharacterTests/testCountCharactersWithFilterPerf()">
+               </Test>
+               <Test
+                  Identifier = "OccurrencesOfCharacterTests/testOccurrencesOfCharacterWithLoopPerf()">
+               </Test>
+               <Test
+                  Identifier = "OccurrencesOfCharacterTests/testOccurrencesOfCharacterWithReducePerf()">
+               </Test>
+               <Test
+                  Identifier = "PalindromeTests/testPalindromeWithArrayPerf()">
+               </Test>
+               <Test
+                  Identifier = "PalindromeTests/testPalindromeWithReversePerf()">
+               </Test>
+               <Test
+                  Identifier = "PangramTests/testIsPangramWithLoopPerf()">
+               </Test>
+               <Test
+                  Identifier = "PangramTests/testIsPangramWithSetPerf()">
+               </Test>
+               <Test
+                  Identifier = "RemoveDuplicatesTests/testRemoveDuplicatesWithDictionaryAndFilterPerf()">
+               </Test>
+               <Test
+                  Identifier = "RemoveDuplicatesTests/testRemoveDuplicatesWithFilterPerf()">
+               </Test>
+               <Test
+                  Identifier = "RemoveDuplicatesTests/testRemoveDuplicatesWithNSOrderedSetAndFilterPerf()">
+               </Test>
+               <Test
+                  Identifier = "RemoveDuplicatesTests/testRemoveDuplicatesWithNSOrderedSetPerf()">
+               </Test>
+               <Test
+                  Identifier = "RotatedStringTests/testIsRotatedStringWithAdditionPerf()">
+               </Test>
+               <Test
+                  Identifier = "RotatedStringTests/testIsRotatedStringWithLoopPerf()">
+               </Test>
+               <Test
+                  Identifier = "SameCharactersTests/testSameCharactersSortPerf()">
+               </Test>
+               <Test
+                  Identifier = "SameCharactersTests/testSameCharactersWithDictionaryPerf()">
+               </Test>
+               <Test
+                  Identifier = "SameCharactersTests/testSameCharactersWithLoopPerf()">
+               </Test>
+               <Test
+                  Identifier = "ThreeDifferentLettersTests/testThreeDifferentLettersPerf()">
+               </Test>
+               <Test
+                  Identifier = "UniqueCharactersTest/testUniqueCharactersWithLoopPerf()">
+               </Test>
+               <Test
+                  Identifier = "UniqueCharactersTest/testUniqueCharactersWithSetPerf()">
+               </Test>
+               <Test
+                  Identifier = "VowelsAndConsonantsTests/testVowelsAndConsonantsForEachPerf()">
+               </Test>
+            </SkippedTests>
+         </TestableReference>
+         <TestableReference
+            skipped = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "4038A1B31F30431800056C9F"
+               BuildableName = "swift-algorithmsUITests.xctest"
+               BlueprintName = "swift-algorithmsUITests"
+               ReferencedContainer = "container:swift-algorithms.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+      </Testables>
+   </TestAction>
+   <LaunchAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      launchStyle = "0"
+      useCustomWorkingDirectory = "NO"
+      ignoresPersistentStateOnLaunch = "NO"
+      debugDocumentVersioning = "YES"
+      debugServiceExtension = "internal"
+      allowLocationSimulation = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "4038A1961F30431800056C9F"
+            BuildableName = "swift-algorithms.app"
+            BlueprintName = "swift-algorithms"
+            ReferencedContainer = "container:swift-algorithms.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+   </LaunchAction>
+   <ProfileAction
+      buildConfiguration = "Release"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      savedToolIdentifier = ""
+      useCustomWorkingDirectory = "NO"
+      debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "4038A1961F30431800056C9F"
+            BuildableName = "swift-algorithms.app"
+            BlueprintName = "swift-algorithms"
+            ReferencedContainer = "container:swift-algorithms.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+   </ProfileAction>
+   <AnalyzeAction
+      buildConfiguration = "Debug">
+   </AnalyzeAction>
+   <ArchiveAction
+      buildConfiguration = "Release"
+      revealArchiveInOrganizer = "YES">
+   </ArchiveAction>
+</Scheme>
