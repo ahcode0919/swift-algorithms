@@ -8,10 +8,6 @@ others. Xcode Project contains performance tests for those that are curious.
 - [Integers](swift-algorithms/swift-algorithms/Integers/README.md)
 - [Strings](swift-algorithms/swift-algorithms/Strings/README.md)
 
-- [Resources](#resources)
-- [Author](#author)
-- [License](#license)
-
 ## Resources
 
 - [Hacker Rank](https://www.hackerrank.com)
