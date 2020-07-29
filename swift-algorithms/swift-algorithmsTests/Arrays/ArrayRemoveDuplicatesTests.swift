@@ -42,4 +42,21 @@ class ArrayRemoveDuplicatesTests: XCTestCase {
             _ = ArrayRemoveDuplicates.removeDuplicatesWithReduce(array)
         }
     }
+    
+    func testRemoveDuplicatesWithSet() {
+        let testString = Helpers.generateRandomString(ofLength: 50)
+        let array = Array(testString)
+        let uniqueArray = ArrayRemoveDuplicates.removeDuplicatesWithSet(array)
+        
+        XCTAssertEqual(Set(uniqueArray).count, uniqueArray.count)
+    }
+    
+    /// Time ~.032 sec
+    func testRemoveDuplicatesWithSetPerf() {
+        let testString = Helpers.generateRandomString(ofLength: 100000)
+        let array = Array(testString)
+        self.measure {
+            _ = ArrayRemoveDuplicates.removeDuplicatesWithSet(array)
+        }
+    }
 }

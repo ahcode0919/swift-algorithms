@@ -37,7 +37,7 @@ static func removeDuplicatesWithNSOrderedSet<T>(_ array: [T]) -> [T] {
 }
 ```
 
-Approach 2 - Use `reduce(into:_)` to iterate through array
+Approach 2 - Use `reduce(into:_)` to iterate through array. This approach is less efficient due to the time complexity of the inner `contains`
 
 ```swift
 static func removeDuplicatesWithReduce<T: Equatable>(_ array: [T]) -> [T] {
@@ -49,5 +49,23 @@ static func removeDuplicatesWithReduce<T: Equatable>(_ array: [T]) -> [T] {
             results.append(value)
         }
     }
+}
+```
+
+Approach 3  - Use a `Set` to track duplicates as we build a new array in-order
+
+```swift
+static func removeDuplicatesWithSet<T: Hashable & Equatable>(_ array: [T]) -> [T] {
+    var uniqueValues: [T] = []
+    var seen = Set<T>()
+    for value in array {
+        if seen.contains(value) {
+            continue
+        } else {
+            uniqueValues.append(value)
+            seen.insert(value)
+        }
+    }
+    return uniqueValues
 }
 ```
