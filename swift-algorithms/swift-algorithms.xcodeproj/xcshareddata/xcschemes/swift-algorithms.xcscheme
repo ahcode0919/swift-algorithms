@@ -82,6 +82,9 @@
                   Identifier = "ArrayRemoveDuplicatesTests/testRemoveDuplicatesWithReducePerf()">
                </Test>
                <Test
+                  Identifier = "ArrayRemoveDuplicatesTests/testRemoveDuplicatesWithSetPerf()">
+               </Test>
+               <Test
                   Identifier = "CondenseWhitespaceTests/testCondenseWhitespaceWithLoopPerf()">
                </Test>
                <Test

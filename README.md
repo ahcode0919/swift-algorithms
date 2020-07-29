@@ -1,7 +1,7 @@
 # Swift Algorithms [![Build Status](https://travis-ci.org/ahcode0919/swift-algorithms.svg?branch=master)](https://travis-ci.org/ahcode0919/swift-algorithms)
 
-Repository of solutions to various problems and algorithms in Swift. For many
-problems many of the common approaches are presented. Some are more efficient than
+Repository of solutions to various problems and algorithms in Swift. Many
+problems have multiple common approaches presented. With some being more efficient than
 others. Xcode Project contains performance tests for those that are curious.
 
 - [Arrays](swift-algorithms/swift-algorithms/Arrays/README.md)
@@ -17,7 +17,7 @@ others. Xcode Project contains performance tests for those that are curious.
 
 ## Author
 
-Aaron Hinton, ahcode0919@users.noreply.github.com
+Aaron Hinton
 
 ## License
 
