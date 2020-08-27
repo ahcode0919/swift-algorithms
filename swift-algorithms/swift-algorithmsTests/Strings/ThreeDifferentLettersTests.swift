@@ -6,7 +6,6 @@
 //  Copyright © 2018 No Name Software. All rights reserved.
 //
 
-import Foundation
 import XCTest
 @testable import swift_algorithms
 

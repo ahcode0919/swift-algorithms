@@ -7,7 +7,7 @@
 //
 
 import XCTest
-import swift_algorithms
+@testable import swift_algorithms
 
 class ArrayFirstDuplicateTests: XCTestCase {
     func testFirstDuplicate() {
