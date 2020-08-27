@@ -9,6 +9,7 @@
 - [Panagram](#panagram)
 - [Remove Duplicates](#remove-duplicates)
 - [Rotated String](#rotated-string)
+- [Run Length Encoding](#run-length-encoding)
 - [Same Characters](#same-characters)
 - [Three Different Letters](#three-different-letters)
 - [Unique Characters](#unique-characters)
@@ -358,6 +359,43 @@ static func isRotatedStringWithLoop(_ original: String, rotated: String) -> Bool
         if tempString == rotated { return true }
     }
     return false
+}
+```
+
+## Run Length Encoding
+
+Perform basic run length encoding on a input string
+
+Example: `"aaabbcddd"` -> `a3b2cd3`
+
+```swift
+static func runLengthEncoding(_ input: String) -> String {
+    if input.isEmpty {
+        return ""
+    }
+    var currentCharacter: Character?
+    var count = 0
+    var compressedString = ""
+    
+    for index in input.indices {
+        if input[index] == currentCharacter {
+            count += 1
+        } else {
+            if let current = currentCharacter {
+                let normalizedCount = count == 1 ? "": "\(count)"
+                compressedString += "\(current)\(normalizedCount)"
+            }
+            count = 1
+            currentCharacter = input[index]
+        }
+    }
+    
+    if let character = currentCharacter {
+        let normalizedCount = count == 1 ? "": "\(count)"
+        compressedString += "\(character)\(normalizedCount)"
+    }
+    
+    return compressedString
 }
 ```
 

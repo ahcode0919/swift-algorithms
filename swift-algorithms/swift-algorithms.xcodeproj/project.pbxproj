@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		40001BC81F31A211001C099C /* PalindromeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40001BC71F31A211001C099C /* PalindromeTests.swift */; };
+		4014BDAE24F4FCB8001404D0 /* RunLengthEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4014BDAD24F4FCB8001404D0 /* RunLengthEncoding.swift */; };
+		4014BDB224F50473001404D0 /* RunLengthEncodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4014BDB024F50473001404D0 /* RunLengthEncodingTests.swift */; };
+		4014BDB424F75F59001404D0 /* PangramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4094162020AE9A620013BCE2 /* PangramTests.swift */; };
 		4027434D1F918B9500D2E6FF /* ArrayRemoveDuplicatesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4027434C1F918B9500D2E6FF /* ArrayRemoveDuplicatesTests.swift */; };
-		4027434E1F918C9B00D2E6FF /* ArrayRemoveDuplicates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407D8C8A1F7BF478004C6224 /* ArrayRemoveDuplicates.swift */; };
 		402743521F91931500D2E6FF /* OccurrencesOfCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402743511F91931500D2E6FF /* OccurrencesOfCharacter.swift */; };
-		402743531F91931500D2E6FF /* OccurrencesOfCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402743511F91931500D2E6FF /* OccurrencesOfCharacter.swift */; };
 		402743551F91948D00D2E6FF /* OccurrencesOfCharacterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402743541F91948D00D2E6FF /* OccurrencesOfCharacterTests.swift */; };
 		402743591F919BFA00D2E6FF /* CondenseWhitespaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402743581F919BFA00D2E6FF /* CondenseWhitespaceTests.swift */; };
 		4027435B1F91ADDB00D2E6FF /* RotatedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4027435A1F91ADDB00D2E6FF /* RotatedString.swift */; };
@@ -26,7 +27,6 @@
 		4038A1CA1F30524900056C9F /* UniqueCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4038A1C91F30524900056C9F /* UniqueCharacters.swift */; };
 		4038A1CC1F3053D700056C9F /* HelpersTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4038A1CB1F3053D700056C9F /* HelpersTest.swift */; };
 		4038A1CD1F30581700056C9F /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4038A1C61F30434D00056C9F /* Helpers.swift */; };
-		4038A1CE1F30582000056C9F /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4038A1C61F30434D00056C9F /* Helpers.swift */; };
 		407D8C8B1F7BF478004C6224 /* ArrayRemoveDuplicates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407D8C8A1F7BF478004C6224 /* ArrayRemoveDuplicates.swift */; };
 		407E118C1F31A4CE007EFF9D /* SameCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407E118B1F31A4CE007EFF9D /* SameCharacters.swift */; };
 		407E118E1F31AC8F007EFF9D /* SameCharactersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407E118D1F31AC8F007EFF9D /* SameCharactersTests.swift */; };
@@ -36,15 +36,12 @@
 		407E119A1F32BF56007EFF9D /* RemoveDuplicateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407E11991F32BF56007EFF9D /* RemoveDuplicateTests.swift */; };
 		407E119C1F330A41007EFF9D /* CondenseWhitespace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407E119B1F330A41007EFF9D /* CondenseWhitespace.swift */; };
 		4094161F20AE965E0013BCE2 /* Pangram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4094161E20AE965E0013BCE2 /* Pangram.swift */; };
-		4094162120AE9A620013BCE2 /* PangramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4094162020AE9A620013BCE2 /* PangramTests.swift */; };
 		4094162320AEA00C0013BCE2 /* VowelsAndConsonants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4094162220AEA00C0013BCE2 /* VowelsAndConsonants.swift */; };
 		4094162520AEA0210013BCE2 /* VowelsAndConsonantsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4094162420AEA0210013BCE2 /* VowelsAndConsonantsTests.swift */; };
 		40AEC5E220F5768400CCC9C7 /* ArrayFirstDuplicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AEC5E120F5768400CCC9C7 /* ArrayFirstDuplicate.swift */; };
-		40AEC5E320F5769100CCC9C7 /* ArrayFirstDuplicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AEC5E120F5768400CCC9C7 /* ArrayFirstDuplicate.swift */; };
 		40AEC5E520F576A600CCC9C7 /* ArrayFirstDuplicateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AEC5E420F576A600CCC9C7 /* ArrayFirstDuplicateTests.swift */; };
 		40AEC5E720F589F700CCC9C7 /* FirstNotRepeatingCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AEC5E620F589F700CCC9C7 /* FirstNotRepeatingCharacter.swift */; };
 		40AEC5E920F58A2E00CCC9C7 /* FirstNotRepeatingCharacterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AEC5E820F58A2E00CCC9C7 /* FirstNotRepeatingCharacterTests.swift */; };
-		40AEC5EA20F58A6700CCC9C7 /* FirstNotRepeatingCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AEC5E620F589F700CCC9C7 /* FirstNotRepeatingCharacter.swift */; };
 		40C0236C242A90B5009E4830 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 40C0236B242A90B5009E4830 /* README.md */; };
 		40EAACCC20C77186003E8ED6 /* CenturyFromYear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EAACCB20C77186003E8ED6 /* CenturyFromYear.swift */; };
 		40EAACCF20C771B4003E8ED6 /* CenturyFromYearTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EAACCE20C771B4003E8ED6 /* CenturyFromYearTests.swift */; };
@@ -74,6 +71,8 @@
 
 /* Begin PBXFileReference section */
 		40001BC71F31A211001C099C /* PalindromeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PalindromeTests.swift; sourceTree = "<group>"; };
+		4014BDAD24F4FCB8001404D0 /* RunLengthEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunLengthEncoding.swift; sourceTree = "<group>"; };
+		4014BDB024F50473001404D0 /* RunLengthEncodingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunLengthEncodingTests.swift; sourceTree = "<group>"; };
 		4027434C1F918B9500D2E6FF /* ArrayRemoveDuplicatesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayRemoveDuplicatesTests.swift; sourceTree = "<group>"; };
 		402743511F91931500D2E6FF /* OccurrencesOfCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OccurrencesOfCharacter.swift; sourceTree = "<group>"; };
 		402743541F91948D00D2E6FF /* OccurrencesOfCharacterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OccurrencesOfCharacterTests.swift; sourceTree = "<group>"; };
@@ -162,6 +161,7 @@
 				4094162020AE9A620013BCE2 /* PangramTests.swift */,
 				407E11991F32BF56007EFF9D /* RemoveDuplicateTests.swift */,
 				4027435D1F91C6DB00D2E6FF /* RotatedStringTests.swift */,
+				4014BDB024F50473001404D0 /* RunLengthEncodingTests.swift */,
 				407E118D1F31AC8F007EFF9D /* SameCharactersTests.swift */,
 				40EAAD3C20CA578A003E8ED6 /* ThreeDifferentLettersTests.swift */,
 				4038A1AD1F30431800056C9F /* UniqueCharactersTest.swift */,
@@ -255,6 +255,7 @@
 				4038A1C91F30524900056C9F /* UniqueCharacters.swift */,
 				4094162220AEA00C0013BCE2 /* VowelsAndConsonants.swift */,
 				40C0236D242A9188009E4830 /* README.md */,
+				4014BDAD24F4FCB8001404D0 /* RunLengthEncoding.swift */,
 			);
 			path = Strings;
 			sourceTree = "<group>";
@@ -424,6 +425,7 @@
 				4094162320AEA00C0013BCE2 /* VowelsAndConsonants.swift in Sources */,
 				40AEC5E720F589F700CCC9C7 /* FirstNotRepeatingCharacter.swift in Sources */,
 				407E119C1F330A41007EFF9D /* CondenseWhitespace.swift in Sources */,
+				4014BDAE24F4FCB8001404D0 /* RunLengthEncoding.swift in Sources */,
 				4094161F20AE965E0013BCE2 /* Pangram.swift in Sources */,
 				40AEC5E220F5768400CCC9C7 /* ArrayFirstDuplicate.swift in Sources */,
 				402743521F91931500D2E6FF /* OccurrencesOfCharacter.swift in Sources */,
@@ -446,29 +448,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4014BDB424F75F59001404D0 /* PangramTests.swift in Sources */,
 				4027435E1F91C6DB00D2E6FF /* RotatedStringTests.swift in Sources */,
 				4027434D1F918B9500D2E6FF /* ArrayRemoveDuplicatesTests.swift in Sources */,
 				4027435C1F91ADDB00D2E6FF /* RotatedString.swift in Sources */,
 				4038A1AE1F30431800056C9F /* UniqueCharactersTest.swift in Sources */,
 				4094162520AEA0210013BCE2 /* VowelsAndConsonantsTests.swift in Sources */,
-				4038A1CE1F30582000056C9F /* Helpers.swift in Sources */,
 				407E11921F31BD32007EFF9D /* ContainsTests.swift in Sources */,
 				40EAAD3D20CA578A003E8ED6 /* ThreeDifferentLettersTests.swift in Sources */,
 				40EAAD4120CB4982003E8ED6 /* FindLongestPrefixTests.swift in Sources */,
 				407E118E1F31AC8F007EFF9D /* SameCharactersTests.swift in Sources */,
-				40AEC5E320F5769100CCC9C7 /* ArrayFirstDuplicate.swift in Sources */,
 				40001BC81F31A211001C099C /* PalindromeTests.swift in Sources */,
 				4038A1CC1F3053D700056C9F /* HelpersTest.swift in Sources */,
 				40AEC5E920F58A2E00CCC9C7 /* FirstNotRepeatingCharacterTests.swift in Sources */,
 				407E119A1F32BF56007EFF9D /* RemoveDuplicateTests.swift in Sources */,
 				40EAACCF20C771B4003E8ED6 /* CenturyFromYearTests.swift in Sources */,
-				402743531F91931500D2E6FF /* OccurrencesOfCharacter.swift in Sources */,
 				40AEC5E520F576A600CCC9C7 /* ArrayFirstDuplicateTests.swift in Sources */,
 				402743591F919BFA00D2E6FF /* CondenseWhitespaceTests.swift in Sources */,
-				40AEC5EA20F58A6700CCC9C7 /* FirstNotRepeatingCharacter.swift in Sources */,
-				4027434E1F918C9B00D2E6FF /* ArrayRemoveDuplicates.swift in Sources */,
+				4014BDB224F50473001404D0 /* RunLengthEncodingTests.swift in Sources */,
 				402743551F91948D00D2E6FF /* OccurrencesOfCharacterTests.swift in Sources */,
-				4094162120AE9A620013BCE2 /* PangramTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,7 +562,7 @@
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -617,7 +615,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

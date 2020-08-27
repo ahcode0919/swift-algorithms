@@ -7,6 +7,7 @@
 //
 
 import XCTest
+@testable import swift_algorithms
 
 class ArrayRemoveDuplicatesTests: XCTestCase {
     func testRemoveDuplicatesWithNSOrderedSet() {

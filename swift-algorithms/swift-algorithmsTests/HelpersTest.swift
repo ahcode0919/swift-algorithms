@@ -6,8 +6,8 @@
 //  Copyright © 2017 No Name Software. All rights reserved.
 //
 
-import Foundation
 import XCTest
+@testable import swift_algorithms
 
 class HelpersTests: XCTestCase {
     func testGenerateRandomString() {
