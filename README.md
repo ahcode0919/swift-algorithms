@@ -1,4 +1,4 @@
-# Swift Algorithms [![Build Status](https://travis-ci.org/ahcode0919/swift-algorithms.svg?branch=master)](https://travis-ci.org/ahcode0919/swift-algorithms)
+# Swift Algorithms [![Build Status](https://travis-ci.com/ahcode0919/swift-ds-algorithms.svg?branch=master)](https://travis-ci.com/ahcode0919/swift-ds-algorithms)
 
 Repository of solutions to various problems and algorithms in Swift. Many
 problems have multiple common approaches presented. With some being more efficient than
