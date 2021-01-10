@@ -8,6 +8,7 @@
 - [Palindrome](#palindrome)
 - [Panagram](#panagram)
 - [Remove Duplicates](#remove-duplicates)
+- [Reverse Words In Sentence](#reverse-words-in-sentence)
 - [Rotated String](#rotated-string)
 - [Run Length Encoding](#run-length-encoding)
 - [Same Characters](#same-characters)
@@ -326,6 +327,22 @@ static func removeDuplicatesWithDictionaryAndFilter(from input: String) -> Strin
         return uniqueDictionary.updateValue(true, forKey: char) == nil
     }
     return String(output)
+}
+```
+
+## Reverse Words In Sentence
+
+Reverse the words in a sentence
+
+Example: "foo bar baz" -> "oof rab zab"
+
+```swift
+class ReverseWordsInSentence {
+    static func reverse(_ sentence: String) -> String {
+        let words = sentence.split(separator: " ")
+        let reversedWords = words.map { $0.reversed() }
+        return String(reversedWords.joined(separator: " "))
+    }
 }
 ```
 
