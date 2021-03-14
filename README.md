@@ -9,17 +9,6 @@ others. Xcode Project contains performance tests for those that are curious.
 - [Integers](swift-algorithms/swift-algorithms/Integers/README.md)
 - [Strings](swift-algorithms/swift-algorithms/Strings/README.md)
 
-## Resources
-
-- [Hacker Rank](https://www.hackerrank.com)
-- [Leetcode](https://leetcode.com)
-- [Cracking The Coding Interview - Gayle Laakmann McDowell](http://www.crackingthecodinginterview.com)
-- [Swift Coding Challenges - Paul Hudson](https://www.hackingwithswift.com/store/swift-coding-challenges)
-
-## Author
-
-Aaron Hinton
-
 ## License
 
 This project is available under the MIT license. See the LICENSE file for more info.
