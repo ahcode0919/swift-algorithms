@@ -12,7 +12,7 @@ class StackTests: XCTestCase {
     
     var stack: Stack<Int>!
 
-    override func setUpWithError() throws {
+    override func setUp() {
         stack = Stack<Int>()
     }
     
