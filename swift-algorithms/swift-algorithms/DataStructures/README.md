@@ -1,6 +1,7 @@
 #  Data Structures
 
 - [Singly Linked List](#singly-linked-list)
+- [Stack](#stack)
 
 ## Singly Linked List
 
@@ -142,4 +143,32 @@ class SinglyLinkedList<T> {
     }
 }
 
+```
+
+## Stack
+
+Basic stack implementation. Stack is a LIFO data structure
+
+```swift
+class Stack<T> {
+    private var stack: [T] = []
+    
+    init() {}
+    
+    func empty() -> Bool {
+        return self.size() == 0
+    }
+    
+    func pop() -> T? {
+        return self.stack.popLast()
+    }
+    
+    func push(value: T) {
+        self.stack.append(value)
+    }
+    
+    func size() -> Int {
+        return self.stack.count
+    }
+}
 ```
