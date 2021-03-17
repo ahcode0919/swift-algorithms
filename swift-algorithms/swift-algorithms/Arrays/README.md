@@ -2,6 +2,7 @@
 
 - [First Duplicate](#first-duplicate)
 - [Remove Duplicates](#remove-duplicates)
+- [Remove Duplicates From Sorted Array](#remove-duplicates-from-sorted-array)
 
 ## First Duplicate
 
@@ -67,5 +68,22 @@ static func removeDuplicatesWithSet<T: Hashable & Equatable>(_ array: [T]) -> [T
         }
     }
     return uniqueValues
+}
+```
+
+## Remove Duplicates From Sorted Array
+
+Remove duplicate values in-place from a sorted array. 
+
+```swift
+static func removeDuplicates(array: inout [Int]) {
+    var count = 0
+    while count < array.count - 1 {
+        if array[count] == array[count + 1] {
+            array.remove(at: count + 1)
+        } else {
+            count += 1
+        }
+    }
 }
 ```
